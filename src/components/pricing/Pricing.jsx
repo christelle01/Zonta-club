@@ -1,12 +1,8 @@
-import React from "react"
-import "./price.css"
+import React from "react";
+import "./price.css";
 
 const Pricing = () => {
-  return (
-    <>
-      
-    </>
-  )
-}
+  return <></>;
+};
 
-export default Pricing
+export default Pricing;
