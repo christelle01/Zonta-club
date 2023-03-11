@@ -2,20 +2,20 @@ export const homeAbout = [
   {
     id: 1,
     cover: "https://img.icons8.com/dotty/80/000000/storytelling.png",
-    title: "Online Courses",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Our causes",
+    desc: "Zonta stands for women’s rights. We advocate for equality, education and an end to child marriage and gender-based violence.",
   },
   {
     id: 1,
     cover: "https://img.icons8.com/ios/80/000000/diploma.png",
-    title: "Earn A Certificates",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Our programs",
+    desc: "Zonta expands opportunities for women and girls through our international education programs and service projects.",
   },
   {
     id: 1,
     cover: "https://img.icons8.com/ios/80/000000/athlete.png",
-    title: "Learn with Expert",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    title: "Our news and events",
+    desc: "We shall not rest until women’s rights are recognized as human rights. See the actions our members and partners are taking to achieve our mission.",
   },
 ]
 export const awrapper = [
@@ -44,205 +44,100 @@ export const awrapper = [
 export const coursesCard = [
   {
     id: 1,
-    cover: "../images/courses/c1.png",
-    coursesName: "Introducing to Software Engineering",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by John Smith",
-        totalTime: "50 lectures (190 hrs)",
-      },
-    ],
-    priceAll: "$100 All Course",
-    pricePer: "$15 per month",
+    cover: "https://www.zonta.org/images/Online/Home/Ending%20Child%20Marriage.png",
+    coursesName: "WE WILL END CHILD MARRIAGE",
+    coursesDesc: "Almost 650 million women alive today were married before turning 18.",
+    
   },
   {
     id: 2,
-    cover: "../images/courses/c2.png",
-    coursesName: "Enhancing Adobe Photoshop CC 2020 Skills",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Ram Gurung",
-        totalTime: "30 lectures (125 hrs)",
-      },
-    ],
-    priceAll: "$200 All Course",
-    pricePer: "$25 per month",
-  },
+    cover: "https://www.zonta.org/images/Online/Home/EVAW.png",
+    coursesName: "WE SAY NO TO VIOLENCE AGAINST WOMEN AND GIRLS",
+    coursesDesc: "About 2 in 3 women have experienced physical and/or sexual violence from an intimate partner.",  },
   {
     id: 3,
-    cover: "../images/courses/c3.png",
-    coursesName: "HTML, CSS, and Javascript for Web Developers",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Saroj Nepal",
-        totalTime: "50 lectures (50 hrs)",
-      },
-    ],
-    priceAll: "$50 All Course",
-    pricePer: "$5 per month",
-  },
-  {
-    id: 4,
-    cover: "../images/courses/c4.png",
-    coursesName: "Introducing to Programming with WordPress",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Prabin Thapa Mager",
-        totalTime: "20 lectures (20 hrs)",
-      },
-    ],
-    priceAll: "$30 All Course",
-    pricePer: "$3 per month",
-  },
-  {
-    id: 5,
-    cover: "../images/courses/c5.png",
-    coursesName: "Introducing to Programming with ReactJS",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Sunil Bishowkaram",
-        totalTime: "100 lectures (150 hrs)",
-      },
-    ],
-    priceAll: "$300 All Course",
-    pricePer: "$30 per month",
-  },
-  {
-    id: 6,
-    cover: "../images/courses/c6.png",
-    coursesName: "Learn Frontend Programming Language",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Sunil Bishowkaram",
-        totalTime: "200 lectures (300 hrs)",
-      },
-    ],
-    priceAll: "$500 All Course",
-    pricePer: "$80 per month",
-  },
-  {
-    id: 7,
-    cover: "../images/courses/c7.png",
-    coursesName: "Introducing to with HTML / CSS",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Price",
-        totalTime: "20 lectures (50 hrs)",
-      },
-    ],
-    priceAll: "$20 All Course",
-    pricePer: "$2 per month",
-  },
-  {
-    id: 8,
-    cover: "../images/courses/c8.png",
-    coursesName: "Introducing to with JAVA",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Petter",
-        totalTime: "80 lectures (200 hrs)",
-      },
-    ],
-    priceAll: "$200 All Course",
-    pricePer: "$40 per month",
-  },
-  {
-    id: 9,
-    cover: "../images/courses/c9.png",
-    coursesName: "Introducing to with HTML / CSS / JAVASCRIPT",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Petter",
-        totalTime: "50 lectures (50 hrs)",
-      },
-    ],
-    priceAll: "$20 All Course",
-    pricePer: "$3 per month",
-  },
+    cover: "https://www.zonta.org/images/Online/Home/Education.png",
+    coursesName: "WE WILL CLOSE THE GENDER GAP IN EDUCATION",
+    coursesDesc: "Every additional year of primary school increases girls' eventual wages by 10-20 percent.",
+  }, 
 ]
-export const online = [
-  {
-    cover: "./images/courses/online/o1.png",
-    hoverCover: "./images/courses/online/o1.1.png",
-    courseName: "UI/UX Design Courses",
-    course: "25 Courses",
-  },
-  {
-    cover: "./images/courses/online/o2.png",
-    hoverCover: "./images/courses/online/o2.1.png",
-    courseName: "Art & Design",
-    course: "25 Courses",
-  },
-  {
-    cover: "./images/courses/online/o3.png",
-    hoverCover: "./images/courses/online/o3.1.png",
-    courseName: "Computer Science",
-    course: "10 Courses",
-  },
-  {
-    cover: "./images/courses/online/o4.png",
-    hoverCover: "./images/courses/online/o4.1.png",
-    courseName: "History & Archeologic",
-    course: "15 Courses",
-  },
-  {
-    cover: "./images/courses/online/o5.png",
-    hoverCover: "./images/courses/online/o5.1.png",
-    courseName: "Software Engineering",
-    course: "30 Courses",
-  },
-  {
-    cover: "./images/courses/online/o6.png",
-    hoverCover: "./images/courses/online/o6.1.png",
-    courseName: "Information Software",
-    course: "60 Courses",
-  },
-  {
-    cover: "./images/courses/online/o7.png",
-    hoverCover: "./images/courses/online/o7.1.png",
-    courseName: "Health & Fitness",
-    course: "10 Courses",
-  },
-  {
-    cover: "./images/courses/online/o8.png",
-    hoverCover: "./images/courses/online/o8.1.png",
-    courseName: "Marketing",
-    course: "30 Courses",
-  },
-  {
-    cover: "./images/courses/online/o9.png",
-    hoverCover: "./images/courses/online/o9.1.png",
-    courseName: "Graphic Design",
-    course: "80 Courses",
-  },
-  {
-    cover: "./images/courses/online/o10.png",
-    hoverCover: "./images/courses/online/o10.1.png",
-    courseName: "Music",
-    course: "120 Courses",
-  },
-  {
-    cover: "./images/courses/online/o11.png",
-    hoverCover: "./images/courses/online/o11.1.png",
-    courseName: "Business Administration",
-    course: "17 Courses",
-  },
-  {
-    cover: "./images/courses/online/o12.png",
-    hoverCover: "./images/courses/online/o12.1.png",
-    courseName: "Web Management",
-    course: "17 Courses",
-  },
-]
+
+
+// export const online = [
+//   {
+//     cover: "./images/courses/online/o1.png",
+//     hoverCover: "./images/courses/online/o1.1.png",
+//     courseName: "UI/UX Design Courses",
+//     course: "25 Courses",
+//   },
+//   {
+//     cover: "./images/courses/online/o2.png",
+//     hoverCover: "./images/courses/online/o2.1.png",
+//     courseName: "Art & Design",
+//     course: "25 Courses",
+//   },
+//   {
+//     cover: "./images/courses/online/o3.png",
+//     hoverCover: "./images/courses/online/o3.1.png",
+//     courseName: "Computer Science",
+//     course: "10 Courses",
+//   },
+//   {
+//     cover: "./images/courses/online/o4.png",
+//     hoverCover: "./images/courses/online/o4.1.png",
+//     courseName: "History & Archeologic",
+//     course: "15 Courses",
+//   },
+//   {
+//     cover: "./images/courses/online/o5.png",
+//     hoverCover: "./images/courses/online/o5.1.png",
+//     courseName: "Software Engineering",
+//     course: "30 Courses",
+//   },
+//   {
+//     cover: "./images/courses/online/o6.png",
+//     hoverCover: "./images/courses/online/o6.1.png",
+//     courseName: "Information Software",
+//     course: "60 Courses",
+//   },
+//   {
+//     cover: "./images/courses/online/o7.png",
+//     hoverCover: "./images/courses/online/o7.1.png",
+//     courseName: "Health & Fitness",
+//     course: "10 Courses",
+//   },
+//   {
+//     cover: "./images/courses/online/o8.png",
+//     hoverCover: "./images/courses/online/o8.1.png",
+//     courseName: "Marketing",
+//     course: "30 Courses",
+//   },
+//   {
+//     cover: "./images/courses/online/o9.png",
+//     hoverCover: "./images/courses/online/o9.1.png",
+//     courseName: "Graphic Design",
+//     course: "80 Courses",
+//   },
+//   {
+//     cover: "./images/courses/online/o10.png",
+//     hoverCover: "./images/courses/online/o10.1.png",
+//     courseName: "Music",
+//     course: "120 Courses",
+//   },
+//   {
+//     cover: "./images/courses/online/o11.png",
+//     hoverCover: "./images/courses/online/o11.1.png",
+//     courseName: "Business Administration",
+//     course: "17 Courses",
+//   },
+//   {
+//     cover: "./images/courses/online/o12.png",
+//     hoverCover: "./images/courses/online/o12.1.png",
+//     courseName: "Web Management",
+//     course: "17 Courses",
+//   },
+// ]
+
 export const team = [
   {
     cover: "./images/team/t1.webp",
@@ -285,28 +180,7 @@ export const team = [
     work: "DEVELOPER AND LEAD INSTRUCTOR",
   },
 ]
-export const price = [
-  {
-    name: "BASIC PLAN",
-    price: "49K",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-  },
-  {
-    name: "BEGINNER PLAN",
-    price: "79K",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-  },
-  {
-    name: "PREMIUM PLAN",
-    price: "109k",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-  },
-  {
-    name: "ULTIMATE PLAN",
-    price: "149K",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-  },
-]
+
 export const faq = [
   {
     title: "How to Enroll This Online Courses?",
@@ -389,26 +263,4 @@ export const blog = [
     cover: "../images/blog/b6.webp",
   },
 ]
-export const testimonal = [
-  {
-    id: 1,
-    name: "ROGER SCOTT",
-    post: "MARKETING MANAGER",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    cover: "./images/testo/t1.webp",
-  },
-  {
-    id: 2,
-    name: "ROGER SCOTT",
-    post: "MARKETING MANAGER",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    cover: "./images/testo/t2.webp",
-  },
-  {
-    id: 3,
-    name: "ROGER SCOTT",
-    post: "MARKETING MANAGER",
-    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    cover: "./images/testo/t3.webp",
-  },
-]
+

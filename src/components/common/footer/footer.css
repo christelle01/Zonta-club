@@ -110,3 +110,8 @@ footer .last i {
 .legal i {
   color: #1eb2a6;
 }
+
+.legal p a {
+  color: rgb(197, 121, 7);
+
+}
