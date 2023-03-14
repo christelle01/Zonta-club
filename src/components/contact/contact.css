@@ -53,3 +53,7 @@ form .flexSB input:nth-child(1) {
     width: 100%;
   }
 }
+
+.margin {
+  margin-top: 20% !important;
+}
