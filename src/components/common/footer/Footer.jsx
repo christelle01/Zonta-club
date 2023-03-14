@@ -15,17 +15,18 @@ const Footer = () => {
           </div>
         </div>
       </section>
-      <footer>
-        <div className='container padding'>
-          <div className='box logo centered'>
+  
+      <div className='legal'>
+      <div class='container'>
+          <div class='logo'>
             <img src="https://www.zonta.org/images/Online/zontalogosm.png" alt="" height={50}/>
+          </div>
+          <div className="social">
             <i className='fab fa-facebook-f icon'></i>
             <i className='fab fa-twitter icon'></i>
             <i className='fab fa-instagram icon'></i>
           </div>
         </div>
-      </footer>
-      <div className='legal'>
         <p>
           Copyright ©2023 All rights reserved | by <a href="https://okydook.com">OKYDOOK</a>
         </p>

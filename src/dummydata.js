@@ -18,6 +18,7 @@ export const homeAbout = [
     desc: "We shall not rest until women’s rights are recognized as human rights. See the actions our members and partners are taking to achieve our mission.",
   },
 ]
+
 export const awrapper = [
   {
     cover: "https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/80/ffffff/external-graduation-education-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png",
@@ -41,6 +42,7 @@ export const awrapper = [
     title: "COURSES",
   },
 ]
+
 export const coursesCard = [
   {
     id: 1,
@@ -207,6 +209,8 @@ export const faq = [
     desc: "It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
   },
 ]
+
+
 export const blog = [
   {
     id: 1,
@@ -264,3 +268,103 @@ export const blog = [
   },
 ]
 
+export const itemData = [
+  {
+    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+    title: 'Breakfast',
+    author: '@bkristastucchio',
+    rows: 2,
+    cols: 2,
+    featured: true,
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+    title: 'Burger',
+    author: '@rollelflex_graphy726',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
+    title: 'Camera',
+    author: '@helloimnik',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
+    title: 'Coffee',
+    author: '@nolanissac',
+    cols: 2,
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+    title: 'Hats',
+    author: '@hjrc33',
+    cols: 2,
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
+    title: 'Honey',
+    author: '@arwinneil',
+    rows: 2,
+    cols: 2,
+    featured: true,
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
+    title: 'Basketball',
+    author: '@tjdragotta',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
+    title: 'Fern',
+    author: '@katie_wasserman',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+    title: 'Mushrooms',
+    author: '@silverdalex',
+    rows: 2,
+    cols: 2,
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
+    title: 'Tomato basil',
+    author: '@shelleypauls',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
+    title: 'Sea star',
+    author: '@peterlaster',
+  },
+  {
+    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
+    title: 'Bike',
+    author: '@southside_customs',
+    cols: 2,
+  },
+];
+
+export const PHOTOS = [
+  {
+    title : "Place de l'independance",
+    image : "https://toastmastersinscriptions.online/images/1672831583.jpg",
+  },
+  {
+    title : "Pure plage: Restaurant et bungalows",
+    image : "https://toastmastersinscriptions.online/images/1672834299.jpeg",
+  },
+  {
+    title : "Blue turtle bay",
+    image : "https://toastmastersinscriptions.online/images/1672834325.jpeg",
+  },
+  {
+    title : "Le Patio: Restaurant et Maison d'hôtes",
+    image : "https://toastmastersinscriptions.online/images/1672835411.jpeg",
+  },
+  {
+    title : "Hôtel du 2 février",
+    image : "https://toastmastersinscriptions.online/images/1672835441.jpeg",
+  },
+  {
+    title : "Le patio: Restaurant et maison d'hôtes",
+    image : "https://toastmastersinscriptions.online/images/1672835521.jpeg",
+  },
+]

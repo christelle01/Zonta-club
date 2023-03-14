@@ -57,12 +57,10 @@ const Header = () => {
             <li>
               <Link to="/contact">Contact</Link>
             </li>
-            <li className="language-button">
-              <Button variant="contained" color="primary" onClick={handleLanguageChange}>
+          </ul>
+          <Button variant="contained" color="primary" onClick={handleLanguageChange}>
                 {language === 'fr' ? 'Anglais' : 'Français'}
               </Button>
-            </li>
-          </ul>
         </nav>
       </header>
     </>

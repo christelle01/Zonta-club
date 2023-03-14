@@ -25,40 +25,35 @@ const Loadable = (Component) => (props) => {
 export default function Router() {
   return useRoutes([
     {
-      path: "about",
-      element: <About />,
+      path: "/",
+      element: <Home />,
     },
     {
-      path: "courses",
-      element: <CourseHome />,
+      path: "schedules",
+      element: <Schedules />,
     },
     {
-      path: "team",
-      element: <Team />,
+      path: "gallery",
+      element: <Gallery />,
     },
     {
-      path: "pricing",
-      element: <Pricing />,
+      path: "hotels",
+      element: <Hotels />,
     },
     {
-      path: "journal",
-      element: <Blog />,
+      path: "inscription",
+      element: <Inscription />,
     },
     {
       path: "contact",
       element: <Contact />,
-    },
-    {
-      path: "/",
-      element: <Home />,
-    },
+    }, 
   ]);
 }
 
 const Home = Loadable(lazy(() => import("../components/home/Home")));
-const About = Loadable(lazy(() => import("../components/home/Home")));
-const CourseHome = Loadable(lazy(() => import("../components/home/Home")));
-const Team = Loadable(lazy(() => import("../components/home/Home")));
-const Blog = Loadable(lazy(() => import("../components/home/Home")));
-const Pricing = Loadable(lazy(() => import("../components/home/Home")));
+const Schedules = Loadable(lazy(() => import("../components/home/Home")));
+const Gallery = Loadable(lazy(() => import("../components/home/HGallery")));
+const Hotels = Loadable(lazy(() => import("../components/home/Home")));
+const Inscription = Loadable(lazy(() => import("../components/home/Home")));
 const Contact = Loadable(lazy(() => import("../components/home/Home")));

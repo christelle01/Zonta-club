@@ -117,4 +117,10 @@ footer .last i {
 }
 
 
+.social {
+  margin: 20px 0;
+}
 
+.social i {
+  margin: 0 10px;
+}
