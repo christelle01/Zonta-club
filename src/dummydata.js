@@ -368,3 +368,54 @@ export const PHOTOS = [
     image : "https://toastmastersinscriptions.online/images/1672835521.jpeg",
   },
 ]
+
+export const rows = [
+  {
+    na: "1",
+    name: "Hôtel 2 Février ( même endroit que le centre de conférence)",
+    number: "200",
+    type: "Standard (double)",
+    price: "65.000",
+    link: "	https://2fevrier.com/fr/",
+  },
+  {
+    na: "2",
+    name: "Hôtel 2 Février ( même endroit que le centre de conférence)",
+    number: "200",
+    type: "Standard (double)",
+    price: "65.000",
+    link: "	https://2fevrier.com/fr/",
+  },
+  {
+    na: "3",
+    name: "Hôtel 2 Février ( même endroit que le centre de conférence)",
+    number: "200",
+    type: "Standard (double)",
+    price: "65.000",
+    link: "	https://2fevrier.com/fr/",
+  },
+  {
+    na: "4",
+    name: "Hôtel 2 Février ( même endroit que le centre de conférence)",
+    number: "200",
+    type: "Standard (double)",
+    price: "65.000",
+    link: "	https://2fevrier.com/fr/",
+  },
+  {
+    na: "5",
+    name: "Hôtel 2 Février ( même endroit que le centre de conférence)",
+    number: "200",
+    type: "Standard (double)",
+    price: "65.000",
+    link: "	https://2fevrier.com/fr/",
+  },
+  {
+    na: "6",
+    name: "Hôtel 2 Février ( même endroit que le centre de conférence)",
+    number: "200",
+    type: "Standard (double)",
+    price: "65.000",
+    link: "	https://2fevrier.com/fr/",
+  },
+];

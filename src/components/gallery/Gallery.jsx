@@ -6,7 +6,6 @@ import "../../components/gallery/Gallery.css"
 import { styled } from '@mui/material/styles';
 import {Container, Stack, Card, CardActionArea, CardMedia, Typography, Grid } from '@mui/material';
 import { PHOTOS } from '../../dummydata';
-import { textAlign } from "@mui/system";
 
 
 // ----------------------------------------------------------------------
