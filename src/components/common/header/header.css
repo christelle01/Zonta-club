@@ -13,7 +13,7 @@
 /*--------head------------*/
 /*--------header------------*/
 header {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(42, 42, 42, 0.2);
   margin: 0 30px;
 }
 header .nav {
@@ -31,10 +31,10 @@ header ul li a {
   transition: 0.5s;
 }
 header ul li a:hover {
-  color: #1eb2a6;
+  color: #951616fc;
 }
 .start {
-  background-color: #1eb2a6;
+  background-color: #951616fc;
   padding: 30px 70px;
   color: #fff;
   clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
@@ -75,3 +75,23 @@ header ul li a:hover {
     background-color: #1eb2a6;
   }
 }
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #fff;
+}
+
+header.sticky ul li a {
+  color: #951616fc;
+}
+
+.MuiButton-containedPrimary {
+  color: #fff;
+  background-color: #951616fc !important;
+}
+
+

@@ -17,9 +17,8 @@ const Footer = () => {
       </section>
       <footer>
         <div className='container padding'>
-          <div className='box logo'>
-          <img src="https://www.zonta.org/images/Online/zontalogosm.png" alt="" height={50}/>
-
+          <div className='box logo centered'>
+            <img src="https://www.zonta.org/images/Online/zontalogosm.png" alt="" height={50}/>
             <i className='fab fa-facebook-f icon'></i>
             <i className='fab fa-twitter icon'></i>
             <i className='fab fa-instagram icon'></i>

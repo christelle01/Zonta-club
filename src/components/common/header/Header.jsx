@@ -1,46 +1,72 @@
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
-import Head from "./Head"
-import "./header.css"
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import Head from "./Head";
+import "./header.css";
+
+import Button from '@material-ui/core/Button';
 
 const Header = () => {
-  const [click, setClick] = useState(false)
+  const [click, setClick] = useState(false);
+  const headerRef = useRef(null);
+  const [language, setLanguage] = useState('fr');
+
+  useEffect(() => {
+    const header = headerRef.current;
+    const sticky = header.offsetTop;
+
+    const handleScroll = () => {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleLanguageChange = () => {
+    setLanguage(language === 'fr' ? 'en' : 'fr');
+  };
 
   return (
     <>
       <Head />
-      <header>
-        <nav className='flexSB'>
+      <header ref={headerRef}>
+        <nav className={`flexSB ${headerRef.current && headerRef.current.classList.contains('sticky') ? 'sticky-text' : ''}`}>
           <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
             <li>
-              <Link to='/'>Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to='/schedules'>Schedules</Link>
+              <Link to="/schedules">Schedules</Link>
             </li>
             <li>
-              <Link to='/gallery'>Gallery</Link>
+              <Link to="/gallery">Gallery</Link>
             </li>
             <li>
-              <Link to='/hotels'>Hotels</Link>
+              <Link to="/hotels">Hotels</Link>
             </li>
             <li>
-              <Link to='/inscription'>Inscription</Link>
+              <Link to="/inscription">Inscription</Link>
             </li>
             <li>
-              <Link to='/contact'>Contact</Link>
+              <Link to="/contact">Contact</Link>
+            </li>
+            <li className="language-button">
+              <Button variant="contained" color="primary" onClick={handleLanguageChange}>
+                {language === 'fr' ? 'Anglais' : 'Français'}
+              </Button>
             </li>
           </ul>
-          <div className='start'>
-            <div className='button'>Language</div>
-          </div>
-          <button className='toggle' onClick={() => setClick(!click)}>
-            {click ? <i className='fa fa-times'> </i> : <i className='fa fa-bars'></i>}
-          </button>
         </nav>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
