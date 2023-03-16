@@ -419,3 +419,20 @@ export const rows = [
     link: "	https://2fevrier.com/fr/",
   },
 ];
+
+export const PROGRAM = [
+  {
+    daytitle: "Day 01",
+    daydate: "24 May",
+  },
+  {
+    daytitle: "Day 02",
+    daydate: "25 May",
+  },{
+    daytitle: "Day 03",
+    daydate: "26 May",
+  },{
+    daytitle: "Day 04",
+    daydate: "25 May",
+  },
+]
