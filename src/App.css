@@ -90,7 +90,6 @@ p {
   background-image: url("https://t4.ftcdn.net/jpg/02/17/89/41/360_F_217894165_H4jRalQ4eg9Kp8XUVGEa7XFDEPtTQ9PY.jpg");
   background-size: cover;
   background-attachment: fixed;
-  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
@@ -112,9 +111,7 @@ p {
   font-size: 17px;
   text-transform: uppercase;
 }
-.margin {
-  margin-top: 40%;
-}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

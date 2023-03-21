@@ -23,13 +23,13 @@ export default function Types() {
     <Container>
     <Box sx={{ width: '100%', textAlign: "center"}}>
       
-      <Typography variant="h2" color={"#951616fc"} gutterBottom>Event Schedules</Typography>
+      <Typography variant="h2" color={"#802528"} gutterBottom>Event Schedules</Typography>
     
       <Typography variant="subtitle1" gutterBottom>
       In the program, Conferences-workshops; Speech contest; hall of fame; Election of District 94 Officers for the upcoming term; Gala dinner and networking, everything has been concocted to make you live a wonderful experience, in the beautiful city of Lomé.
       </Typography>
       
-      <Stack width={1} direction="row" justifyContent={'center'} spacing={2}>
+      <Stack width={1} direction="row" justifyContent={'center'} spacing={4} py={5}>
         {PROGRAM.map((dayitem, index) => <DayCard key={dayitem.daytitle+index} dayitem={dayitem} handleSelected={handleSelected} selected={selected===index} index={index}/>)}
       </Stack>
       
@@ -43,7 +43,7 @@ const DayCard = ({dayitem, handleSelected, selected, index}) => {
   const {daytitle, daydate} = dayitem
   return (
     <Stack alignItems={'center'} onClick={() => handleSelected(index)} sx={{ cursor: "pointer",  }}>
-      <Stack component={Paper} bgcolor={selected?"#951616fc":""} height={100} width={100} justifyContent={'center'} textAlign="center">
+      <Stack component={Paper} bgcolor={selected?"#802528":""} height={80} width={80} justifyContent={'center'} textAlign="center">
         <Typography color={selected ? 'white' : ""}>{daytitle}</Typography>
         <Typography color={selected ? 'white' : ""}>{daydate}</Typography>
       </Stack>

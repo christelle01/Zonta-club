@@ -60,7 +60,7 @@ const Header = () => {
           </ul>
           <Button variant="contained" color="primary" onClick={handleLanguageChange}>
                 {language === 'fr' ? 'Anglais' : 'Français'}
-              </Button>
+          </Button>
         </nav>
       </header>
     </>

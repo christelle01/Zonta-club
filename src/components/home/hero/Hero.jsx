@@ -1,6 +1,7 @@
 import React from "react"
 import Heading from "../../common/heading/Heading"
 import "./Hero.css"
+import { Link } from "@mui/material"
 
 const Hero = () => {
   return (
@@ -13,14 +14,15 @@ const Hero = () => {
 To register and participate in this great meeting, please click on the button</p>
             <div className='button'>
               <button className='primary-btn'>
-                REGISTER <i className='fa fa-long-arrow-alt-right'></i>
+                <Link to="/inscription">REGISTER <i className='fa fa-long-arrow-alt-right'></i></Link>
               </button>
               
             </div>
           </div>
         </div>
       </section>
-      <div className='margin'></div>
+      
+
     </>
   )
 }

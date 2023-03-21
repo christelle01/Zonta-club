@@ -1,13 +1,14 @@
 import React from "react"
 import HeroPages from "./hero/HeroPages"
+import Inscription from "../inscription/Inscription"
 
-const GalleryPages = () => {
+const HInscription = () => {
   return (
     <>
       <HeroPages />
-      
+      <Inscription />
     </>
   )
 }
 
-export default GalleryPages
+export default HInscription
