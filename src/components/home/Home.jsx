@@ -14,7 +14,6 @@ const RootStyle  = styled(Stack)(() => ({
   height: '80vmin',
   position: 'relative',
   zIndex: -1,
-  backgroundColor: 'red'
 }));
 
 const Home = () => {
@@ -23,7 +22,6 @@ const Home = () => {
     <RootStyle>
       <Hero />
       <Countdown />
-      {/* <Box height={50} width={1} bgcolor='green' /> */}
     </RootStyle>
 
       <AboutCard />

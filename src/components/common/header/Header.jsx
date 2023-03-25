@@ -1,70 +1,126 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import Head from "./Head";
-import "./header.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { AppBar, Toolbar, Typography, Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import { Container, Stack, MenuItem, Menu } from '@mui/material';
 
-import Button from '@material-ui/core/Button';
+const useStyles = makeStyles((theme) => ({
+  logo: {
+    height: 50,
+  },
+  toolbar: {
+    justifyContent: "center",
+    backgroundColor: "white",
+  },
+  title: {
+    flexGrow: 1,
+    textDecoration: "none",
+    color: "#802528",
+  },
+}));
 
-const Header = () => {
-  const [click, setClick] = useState(false);
-  const headerRef = useRef(null);
-  const [language, setLanguage] = useState('fr');
+const NavigationMenu = () => {
+  const classes = useStyles();
+  const [isSticky, setIsSticky] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
-  useEffect(() => {
-    const header = headerRef.current;
-    const sticky = header.offsetTop;
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 50) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
 
-    const handleScroll = () => {
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const handleLanguageChange = () => {
-    setLanguage(language === 'fr' ? 'en' : 'fr');
-  };
-
   return (
-    <>
-      <Head />
-      <header ref={headerRef}>
-        <nav className={`flexSB ${headerRef.current && headerRef.current.classList.contains('sticky') ? 'sticky-text' : ''}`}>
-          <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/schedules">Schedules</Link>
-            </li>
-            <li>
-              <Link to="/gallery">Gallery</Link>
-            </li>
-            <li>
-              <Link to="/hotels">Hotels</Link>
-            </li>
-            <li>
-              <Link to="/inscription">Inscription</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-          <Button variant="contained" color="primary" onClick={handleLanguageChange}>
-                {language === 'fr' ? 'Anglais' : 'Français'}
-          </Button>
-        </nav>
-      </header>
-    </>
+    <AppBar position={isSticky ? "fixed" : "static"}>
+      <Stack bgcolor={"white"} >
+        <Toolbar>
+          <Container 
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: { xs: 'space-between' },
+              pl: { md: 5 },
+            }}
+            maxWidth="xl"
+          >
+            <Link to="/">
+              <img src={"https://www.zonta.org/images/Online/zontalogosm.png"} alt="logo" className={classes.logo} />
+            </Link>
+            <Button color="inherit">
+              <Link to="/" className={classes.title}>
+                HOME
+              </Link>
+            </Button>
+            <Button color="inherit">
+              <Link to="/schedules" className={classes.title}>
+                SCHEDULES
+              </Link>
+            </Button>
+            <Button color="inherit">
+              <Link to="/gallery" className={classes.title}>
+                GALLERY
+              </Link>
+            </Button>
+            <Button color="inherit">
+              <Link to="/hotels" className={classes.title}>
+                HOTELS
+              </Link>
+            </Button>
+            <Button color="inherit">
+              <Link to="/inscription" className={classes.title}>
+                INSCRIPTION
+              </Link>
+            </Button>
+            <Button color="inherit">
+              <Link to="/contact" className={classes.title}>
+                CONTACT
+              </Link>
+            </Button>
+            <div>
+              <Button
+                id="basic-button"
+                aria-controls={open ? 'basic-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? 'true' : undefined}
+                onClick={handleClick}
+              >
+                <i className='fa fa-globe'></i> LANGUAGES
+              </Button>
+              <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                  'aria-labelledby': 'basic-button',
+                }}
+              >
+                <MenuItem onClick={handleClose}>ENGLISH</MenuItem>
+                <MenuItem onClick={handleClose}>FRENCH</MenuItem>
+              </Menu>
+            </div>
+          </Container>
+        </Toolbar>
+      </Stack>
+    </AppBar>
   );
 };
 
-export default Header;
+export default NavigationMenu;

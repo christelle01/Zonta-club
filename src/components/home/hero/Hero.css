@@ -1,13 +1,11 @@
 .hero {
   background-image: url("https://t4.ftcdn.net/jpg/02/17/89/41/360_F_217894165_H4jRalQ4eg9Kp8XUVGEa7XFDEPtTQ9PY.jpg");
   background-size: cover;
-  background-attachment: fixed;
   top: 0;
   left: 0;
   z-index: -1;
   width: 100%;
   height: 100%;
-  padding-top: 20%;
   padding-right: 50px;
   color: #fff;
 }
@@ -22,9 +20,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .margin {
-    height: 40vh;
-  }
   .hero {
     background-position: right;
     padding-top: 50%;
