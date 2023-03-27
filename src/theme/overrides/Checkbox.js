@@ -1,4 +1,4 @@
-//
+import React from 'react';
 import { CheckboxIcon, CheckboxCheckedIcon, CheckboxIndeterminateIcon } from './CustomIcons';
 
 // ----------------------------------------------------------------------

@@ -1,4 +1,4 @@
-//
+import React from 'react';
 import { StarIcon } from './CustomIcons';
 
 // ----------------------------------------------------------------------

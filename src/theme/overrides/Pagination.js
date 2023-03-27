@@ -1,5 +1,5 @@
 import { alpha } from '@mui/material/styles';
-
+import React from 'react';
 // ----------------------------------------------------------------------
 
 export default function Pagination(theme) {

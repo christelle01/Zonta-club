@@ -1,4 +1,5 @@
 import React from "react"
+import { Stack } from '@mui/material';
 import { useLocation } from "react-router-dom"
 
 const Back = ({ title }) => {
@@ -7,8 +8,10 @@ const Back = ({ title }) => {
   return (
     <>
       <section className='back'>
-        <h2>Home / {location.pathname.split("/")[1]}</h2>
-        <h1>{title}</h1>
+        <Stack height={1} width={1} justifyContent='center' alignItems='center'>
+          <h2>Home / {location.pathname.split("/")[1]}</h2>
+          <h1>{title}</h1>
+        </Stack>
       </section>
     </>
   )

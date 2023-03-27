@@ -1,5 +1,4 @@
-// ----------------------------------------------------------------------
-
+import React from 'react';
 export default function Progress(theme) {
   const isLight = theme.palette.mode === 'light';
 

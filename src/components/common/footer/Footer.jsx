@@ -17,7 +17,7 @@ const Footer = () => {
       </section>
   
       <div className='legal'>
-      <div class='container'>
+      <div className='container'>
           <div className='logo'>
             <img src="https://www.zonta.org/images/Online/zontalogosm.png" alt="" height={50}/>
           </div>

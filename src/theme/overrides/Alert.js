@@ -1,5 +1,5 @@
 import { ErrorIcon, InfoIcon, SuccessIcon, WarningIcon } from './CustomIcons';
-
+import React from 'react';
 // ----------------------------------------------------------------------
 
 export default function Alert(theme) {

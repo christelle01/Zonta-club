@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Container } from '@mui/material';
 
 import { styled } from '@mui/material/styles';
-import "../../components/hotels/Hotels.css"
 import { rows } from '../../dummydata';
 
 

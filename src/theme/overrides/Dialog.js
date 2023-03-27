@@ -1,5 +1,4 @@
-// ----------------------------------------------------------------------
-
+import React from 'react';
 export default function Dialog(theme) {
   return {
     MuiDialog: {

@@ -13,7 +13,6 @@ const RootStyle  = styled(Stack)(() => ({
   width: '100%',
   height: '80vmin',
   position: 'relative',
-  zIndex: -1,
 }));
 
 const Home = () => {

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { TreeViewCollapseIcon, TreeViewExpandIcon, TreeViewEndIcon } from './CustomIcons';
 
 // ----------------------------------------------------------------------
