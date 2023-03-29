@@ -14,15 +14,12 @@ const AboutCard = () => {
           </Box>
           <Box className='right row' >
             <Heading subtitle='' title='PCO Note' />
-              <Typography>Dear Toastmasters,</Typography>
-              <Typography>To be the President of the District 94 2023 Conference Organizing Committee is a privilege and a great honor for me.</Typography>
-              <Typography>With my Team, we are waiting for you to live an unforgettable experience in Lome-la-Belle.</Typography>
-              <Typography>The District Conference will take place from May 24 to 27, 2023, in Togo, a beautiful country in West Africa, which enjoys a mild climate and a favorable environment to spend a dream stay.</Typography>
-              <Typography>During four days, we will practice and live intensely the leadership and oral communication, the two pillars of the Toastmasters methodology, through an enticing and unpublished program that the Conference Organizing Committee has concocted for you.</Typography>
-              <Typography>Lome-la-Belle, is honored and proud to welcome Toastmasters from Benin, Burkina Faso, Cameroon, Congo, Ivory Coast, Ghana, Gambia, Guinea, Mali, Nigeria, Niger, Senegal and from all over the world.</Typography>
-              <Typography>Sign up and join us to experience unforgettable moments.</Typography>
-              <Typography>Lome 2023 will be unique.</Typography>
-              <Typography><strong>Naka De SOUZA, Chair of the conference organizing committee</strong></Typography>
+              <Typography>Chers membres du Zonta,</Typography>
+              <Typography>Nous sommes ravis de vous accueillir chaleureusement au Togo, pays d'accueil de la conférence du District 18 regroupant les clubs d'Accra, Abidjan, Ouagadougou, Lagos, Freetown, Ibadan. Nous sommes honorés de vous recevoir dans notre belle nation africaine.</Typography>
+              <Typography>Nous sommes convaincus que cette conférence sera une occasion inoubliable de partager des connaissances et d'acquérir de nouvelles compétences dans le domaine de la promotion des droits des femmes et de l'égalité de genre.</Typography>
+              <Typography>Le Togo est un pays dynamique et accueillant, riche en culture et en histoire. Nous sommes impatients de vous faire découvrir notre patrimoine, notre gastronomie, nos traditions et notre hospitalité légendaire.</Typography>
+              <Typography>Nous espérons que cette conférence sera une expérience enrichissante pour tous les participants. </Typography>
+              <Typography>Bienvenue au Togo !</Typography>
           </Box>
         </Grid>
       </Stack>

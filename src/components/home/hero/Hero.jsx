@@ -17,13 +17,14 @@ const Hero = () => {
   return (
         <section className='hero'>
           <Stack height={1} width={{xs:1, md: 0.5}} justifyContent='center' pl={{xs: 2, md: 10}}>
-              <Heading subtitle='' title='DISTRICT 94 CONFERENCE' />
-              <p>From May 24 to 27, 2023, Togo welcomes the Toastmasters of District 94 for its big annual meeting.
-                To register and participate in this great meeting, please click on the button</p>
+              <Heading subtitle='' title='CONFÉRENCE DISTRICT 18' />
+              <p>Le Togo a l'honneur d'accueillir tous les membres du club Zonta du monde entier du 19 au 22 Octobre 2023, 
+                pour la conférence du District 18. Pour vous enregistrer et participer à cet évènement, nous vous invitons cordialement à cliquer sur le lien ci-dessous.
+              </p>
 
               <Stack direction='row'>
                 <button className='primary-btn' onClick={handleNavigation}>
-                REGISTER <i className='fa fa-long-arrow-alt-right'></i>
+                S'INSCRIRE <i className='fa fa-long-arrow-alt-right'></i>
                 </button>   
               </Stack>
           </Stack>
