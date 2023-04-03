@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function ControlLabel(theme) {
   return {
     MuiFormControlLabel: {

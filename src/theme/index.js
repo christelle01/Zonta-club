@@ -1,16 +1,18 @@
-import PropTypes from 'prop-types';
-import React, { useMemo } from 'react';
+import PropTypes from "prop-types";
+import React, { useMemo } from "react";
 // @mui
-import { CssBaseline } from '@mui/material';
-import { createTheme, ThemeProvider as MUIThemeProvider, StyledEngineProvider } from '@mui/material/styles';
-// hooks
-import useSettings from '../hooks/useSettings';
+import { CssBaseline } from "@mui/material";
+import {
+  createTheme,
+  ThemeProvider as MUIThemeProvider,
+  StyledEngineProvider,
+} from "@mui/material/styles";
 //
-import palette from './palette';
-import typography from './typography';
-import breakpoints from './breakpoints';
-import componentsOverride from './overrides';
-import shadows, { customShadows } from './shadows';
+import palette from "./palette";
+import typography from "./typography";
+import breakpoints from "./breakpoints";
+import componentsOverride from "./overrides";
+import shadows, { customShadows } from "./shadows";
 
 // ----------------------------------------------------------------------
 
@@ -19,21 +21,17 @@ ThemeProvider.propTypes = {
 };
 
 export default function ThemeProvider({ children }) {
-  const { themeMode, themeDirection } = useSettings();
-
-  const isLight = themeMode === 'light';
-
   const themeOptions = useMemo(
     () => ({
-      palette: isLight ? palette.light : palette.dark,
+      palette: palette.light,
       typography,
       breakpoints,
       shape: { borderRadius: 8 },
-      direction: themeDirection,
-      shadows: isLight ? shadows.light : shadows.dark,
-      customShadows: isLight ? customShadows.light : customShadows.dark,
+      direction: "ltr",
+      shadows: shadows.light,
+      customShadows: customShadows.light,
     }),
-    [isLight, themeDirection]
+    []
   );
 
   const theme = createTheme(themeOptions);

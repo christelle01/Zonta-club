@@ -1,12 +1,8 @@
-import React from 'react';
-
-// ----------------------------------------------------------------------
-
 export default function Skeleton(theme) {
   return {
     MuiSkeleton: {
       defaultProps: {
-        animation: 'wave',
+        animation: "wave",
       },
 
       styleOverrides: {

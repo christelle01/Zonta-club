@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { AppBar, Toolbar, Typography, Button } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { Container, Stack, MenuItem, Menu } from '@mui/material';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { AppBar, Toolbar, Button } from "@mui/material";
+import { makeStyles } from "@mui/styles";
+import { Container, Stack, MenuItem, Menu } from "@mui/material";
 
 const useStyles = makeStyles((theme) => ({
   logo: {
@@ -41,27 +41,31 @@ const NavigationMenu = () => {
   };
 
   React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <AppBar position={isSticky ? "fixed" : "static"}>
-      <Stack bgcolor={"white"} >
+      <Stack bgcolor={"white"}>
         <Toolbar>
-          <Container 
+          <Container
             sx={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: { xs: 'space-between' },
+              display: "flex",
+              alignItems: "center",
+              justifyContent: { xs: "space-between" },
               pl: { md: 5 },
             }}
             maxWidth="xl"
           >
             <Link to="/">
-              <img src={"https://www.zonta.org/images/Online/zontalogosm.png"} alt="logo" className={classes.logo} />
+              <img
+                src={"https://www.zonta.org/images/Online/zontalogosm.png"}
+                alt="logo"
+                className={classes.logo}
+              />
             </Link>
             <Button color="inherit">
               <Link to="/" className={classes.title}>
@@ -96,12 +100,12 @@ const NavigationMenu = () => {
             <div>
               <Button
                 id="basic-button"
-                aria-controls={open ? 'basic-menu' : undefined}
+                aria-controls={open ? "basic-menu" : undefined}
                 aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
+                aria-expanded={open ? "true" : undefined}
                 onClick={handleClick}
               >
-                <i className='fa fa-globe'></i> LANGUES
+                <i className="fa fa-globe"></i> LANGUES
               </Button>
               <Menu
                 id="basic-menu"
@@ -109,7 +113,7 @@ const NavigationMenu = () => {
                 open={open}
                 onClose={handleClose}
                 MenuListProps={{
-                  'aria-labelledby': 'basic-button',
+                  "aria-labelledby": "basic-button",
                 }}
               >
                 <MenuItem onClick={handleClose}>ENGLISH</MenuItem>

@@ -1,13 +1,10 @@
-import React from 'react';
-
-
 export default function List(theme) {
   return {
     MuiListItemIcon: {
       styleOverrides: {
         root: {
-          color: 'inherit',
-          minWidth: 'auto',
+          color: "inherit",
+          minWidth: "auto",
           marginRight: theme.spacing(2),
         },
       },
@@ -15,7 +12,7 @@ export default function List(theme) {
     MuiListItemAvatar: {
       styleOverrides: {
         root: {
-          minWidth: 'auto',
+          minWidth: "auto",
           marginRight: theme.spacing(2),
         },
       },
