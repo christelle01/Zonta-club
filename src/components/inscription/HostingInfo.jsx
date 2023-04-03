@@ -11,15 +11,15 @@ import {
 
 import { themeColors } from '../../constant/themeColors';
 
-export default function TravelInfo({ handleNext }) {
-  const [travelInfo, setTravelInfo] = useState({
-    arrival: '',
-    returnDate: '',
-    entryPoint: '',
+export default function HostingInfo({ handleNext }) {
+  const [hostingInfo, setHostingInfo] = useState({
+    hotelName: '',
+    entryDate: '',
+    checkOut: '',
   });
 
   const handleChange = (e) => {
-    setTravelInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setHostingInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = (e) => {
@@ -27,7 +27,7 @@ export default function TravelInfo({ handleNext }) {
     handleNext();
   };
 
-  console.log(travelInfo);
+  console.log(hostingInfo);
   return (
     <Container>
       <Paper elevation={0} sx={{ p: 3 }}>
@@ -35,16 +35,16 @@ export default function TravelInfo({ handleNext }) {
           <Stack width={1} spacing={4}>
             <FormControlLabel
               control={<Checkbox />}
-              label="Resident in Lome"
+              label="Résidence personnelle"
             />
             <Stack direction="row" spacing={3} width={1}>
               <Stack width={1}>
                 <TextField
                   fullWidth
                   name="arrival"
-                  label="Date of arrival in Lome"
+                  label="Choisir son hotel"
                   variant="outlined"
-                  value={travelInfo.arrival}
+                  value={hostingInfo.hotelName}
                   onChange={handleChange}
                   required
                 />
@@ -56,9 +56,9 @@ export default function TravelInfo({ handleNext }) {
                 <TextField
                   fullWidth
                   name="returnDate"
-                  label="Return date from Lome"
+                  label="Date d'entrée à l'hôtel"
                   variant="outlined"
-                  value={travelInfo.returnDate}
+                  value={hostingInfo.entryDate}
                   onChange={handleChange}
                   required
                 />
@@ -70,9 +70,9 @@ export default function TravelInfo({ handleNext }) {
                 <TextField
                   fullWidth
                   name="entryPoint"
-                  label="Entry point in Lome"
+                  label="Date de départ de l'hôtel"
                   variant="outlined"
-                  value={travelInfo.entryPoint}
+                  value={hostingInfo.checkOut}
                   onChange={handleChange}
                   required
                 />

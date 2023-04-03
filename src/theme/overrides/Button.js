@@ -1,13 +1,11 @@
-import React from 'react';
-
 export default function Button(theme) {
   return {
     MuiButton: {
       styleOverrides: {
         root: {
-          textTransform: 'none',
-          '&:hover': {
-            boxShadow: 'none',
+          textTransform: "none",
+          "&:hover": {
+            boxShadow: "none",
           },
         },
         sizeLarge: {
@@ -17,7 +15,7 @@ export default function Button(theme) {
         containedInherit: {
           color: theme.palette.grey[800],
           boxShadow: theme.customShadows.z8,
-          '&:hover': {
+          "&:hover": {
             backgroundColor: theme.palette.grey[400],
           },
         },
@@ -41,13 +39,13 @@ export default function Button(theme) {
         },
         // outlined
         outlinedInherit: {
-          border: `1px solid ${theme.palette.grey[500_32]}`,
-          '&:hover': {
+          border: `1px solid ${theme.palette.grey["500_32"]}`,
+          "&:hover": {
             backgroundColor: theme.palette.action.hover,
           },
         },
         textInherit: {
-          '&:hover': {
+          "&:hover": {
             backgroundColor: theme.palette.action.hover,
           },
         },

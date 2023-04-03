@@ -1,14 +1,11 @@
-import React from 'react';
-
-
 export default function Menu(theme) {
   return {
     MuiMenuItem: {
       styleOverrides: {
         root: {
-          '&.Mui-selected': {
+          "&.Mui-selected": {
             backgroundColor: theme.palette.action.selected,
-            '&:hover': {
+            "&:hover": {
               backgroundColor: theme.palette.action.hover,
             },
           },

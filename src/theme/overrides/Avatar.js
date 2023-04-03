@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 export default function Avatar(theme) {
   return {
     MuiAvatar: {
@@ -16,7 +13,7 @@ export default function Avatar(theme) {
         avatar: {
           fontSize: 16,
           fontWeight: theme.typography.fontWeightMedium,
-          '&:first-of-type': {
+          "&:first-of-type": {
             fontSize: 14,
             color: theme.palette.primary.main,
             backgroundColor: theme.palette.primary.lighter,

@@ -31,10 +31,10 @@ export default function ListPhotos() {
     <RootStyle>
       <Container>
         <Stack component={m.div} spacing={3} textAlign="justify" py={10}>
-          <Typography variant="h3" sx={{ color: '#951616fc', textAlign: "center" }}>
+          <Typography variant="h2" sx={{ color: '#951616fc', textAlign: "center" }}>
             Photos de l'évènement
           </Typography>
-          <Typography sx={{ textAlign: "center" }}>Découvrez Lomé et la conférence en images</Typography>
+          <Typography variant="subtitle1" sx={{ textAlign: "center" }}>Découvrez Lomé et la conférence en images</Typography>
           <Grid container spacing={2} py={5}>
             {PHOTOS.map((item) => (
               <Grid key={item.title} px={2} py={3} xs={12} sm={4} md={4} lg={4} xl={3}>

@@ -1,7 +1,5 @@
-import React from 'react';
-
 //
-import { InputSelectIcon } from './CustomIcons';
+import { InputSelectIcon } from "./CustomIcons";
 
 // ----------------------------------------------------------------------
 

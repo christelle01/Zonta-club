@@ -1,7 +1,6 @@
-import React from 'react';
-import { Typography } from '@material-ui/core';
-import { Box, Stack } from '@mui/material';
-
+import React from "react";
+import { Typography } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 
 class CountdownTimer extends React.Component {
   constructor(props) {
@@ -9,7 +8,7 @@ class CountdownTimer extends React.Component {
 
     // Définir la date de fin du compte à rebours
     this.state = {
-      endDate: new Date('2023-05-20T00:00:00Z'),
+      endDate: new Date("2023-05-20T00:00:00Z"),
     };
   }
 
@@ -36,56 +35,80 @@ class CountdownTimer extends React.Component {
     const seconds = Math.floor((timeRemaining / 1000) % 60);
 
     return (
-        <Stack width={1} direction="row" justifyContent='center' position='absolute' bottom={-75}>
-          
-            <Box sx={{ bgcolor : "#802528", width: '60%', borderRadius: 1, py:5, color: 'white',  }}>
+      <Stack
+        width={1}
+        direction="row"
+        justifyContent="center"
+        position="absolute"
+        bottom={-75}
+      >
+        <Box
+          sx={{
+            bgcolor: "#802528",
+            width: "60%",
+            borderRadius: 1,
+            py: 5,
+            color: "white",
+          }}
+        >
+          <Stack
+            width={1}
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Stack width={1} justifyContent="center" alignItems="center">
+              <Typography variant="h3">
+                {days}
+              </Typography>
+              <Typography variant="subtitle1">Jours</Typography>
+            </Stack>
 
-                <Stack width={1} container direction="row" justifyContent='center' alignItems="center">
+            <Typography variant="h3" component="span">
+              {" "}
+              :
+            </Typography>
 
-                    <Stack width={1} justifyContent='center' alignItems='center'>
-                      <Typography variant="h3"  color='green'>
-                          {days}
-                      </Typography>
-                      <Typography variant="subtitle1" >
-                          Jours
-                      </Typography>
-                    </Stack>
-              
-                  <Typography variant="h3" component="span"> :</Typography>
+            <Stack width={1} justifyContent="center" alignItems="center">
+              <Typography variant="h3" component="span">
+                {hours}
+              </Typography>
+              <Typography variant="subtitle1" component="span">
+                Heures
+              </Typography>
+            </Stack>
 
-                  <Stack width={1} justifyContent='center' alignItems='center'>
-                    <Typography variant="h3" component="span">
-                        {hours}
-                    </Typography>
-                    <Typography variant="subtitle1" component="span">
-                        Heures
-                    </Typography>
-                  </Stack>
-              
-                  <Typography variant="h3" component="span"> :</Typography>
-              
-                  <Stack width={1} justifyContent='center' alignItems='center'>
-                    <Typography variant="h3" component="span">
-                        {minutes}
-                    </Typography>
-                    <Typography variant="subtitle1" component="span">
-                        Minutes
-                    </Typography>
-                  </Stack>
-            
-                  <Typography variant="h3" component="span"> :</Typography>
+            <Typography variant="h3" component="span">
+              {" "}
+              :
+            </Typography>
 
-                  <Stack width={1} justifyContent='center' alignItems='center'>
-                    <Typography variant="h3" component="span">
-                        {seconds}
-                    </Typography>
-                    <Typography variant="subtitle1" component="span">
-                        Secondes
-                    </Typography>
-                  </Stack>
-                </Stack>
-            </Box>
-        </Stack>
+            <Stack width={1} justifyContent="center" alignItems="center">
+              <Typography variant="h3" component="span">
+                {minutes}
+              </Typography>
+              <Typography variant="subtitle1" component="span">
+                Minutes
+              </Typography>
+            </Stack>
+
+            <Typography variant="h3" component="span">
+              {" "}
+              :
+            </Typography>
+
+            <Stack width={1} justifyContent="center" alignItems="center">
+              <Typography variant="h3" component="span">
+                {seconds}
+              </Typography>
+              <Typography variant="subtitle1" component="span">
+                Secondes
+              </Typography>
+            </Stack>
+          </Stack>
+        </Box>
+      </Stack>
     );
   }
 }

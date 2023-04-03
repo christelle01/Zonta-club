@@ -1,7 +1,3 @@
-// ----------------------------------------------------------------------
-import React from 'react';
-
-
 export default function Autocomplete(theme) {
   return {
     MuiAutocomplete: {
@@ -11,7 +7,7 @@ export default function Autocomplete(theme) {
         },
         listbox: {
           padding: theme.spacing(0, 1),
-          '& .MuiAutocomplete-option': {
+          "& .MuiAutocomplete-option": {
             padding: theme.spacing(1),
             margin: theme.spacing(1, 0),
             borderRadius: theme.shape.borderRadius,
