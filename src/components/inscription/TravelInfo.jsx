@@ -9,6 +9,9 @@ import {
   FormControlLabel,
 } from "@mui/material";
 import { useSignUpFormContext } from "./Inscription";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 export default function TravelInfo({ handleNext, handlePrev }) {
   const { values, onChange } = useSignUpFormContext();
@@ -34,16 +37,35 @@ export default function TravelInfo({ handleNext, handlePrev }) {
           />
           <Stack direction="row" spacing={3} width={1}>
             <Stack width={1}>
-              <TextField
-                fullWidth
-                name="arrivalDate"
-                size="small"
-                label="Date d'arrivée à Lomé"
-                variant="outlined"
-                value={travelInfo.arrivalDate}
-                onChange={handleChange}
-                required
-              />
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  fullWidth
+                  name="arrivalDate"
+                  size="small"
+                  label="Date d'arrivée à Lomé"
+                  variant="outlined"
+                  value={travelInfo.arrivalDate}
+                  onChange={(val) => onChange("travel.arrivalDate", val)}
+                  required
+                />
+              </LocalizationProvider>
+            </Stack>
+          </Stack>
+
+          <Stack direction="row" spacing={3} width={1}>
+            <Stack width={1}>
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  fullWidth
+                  name="returnDate"
+                  size="small"
+                  label="Date de retour de Lomé"
+                  variant="outlined"
+                  value={travelInfo.returnDate}
+                  onChange={(val) => onChange("travel.returnDate", val)}
+                  required
+                />
+              </LocalizationProvider>
             </Stack>
           </Stack>
 
@@ -51,22 +73,6 @@ export default function TravelInfo({ handleNext, handlePrev }) {
             <Stack width={1}>
               <TextField
                 fullWidth
-                size="small"
-                name="returnDate"
-                label="Date de retour de Lomé"
-                variant="outlined"
-                value={travelInfo.returnDate}
-                onChange={handleChange}
-                required
-              />
-            </Stack>
-          </Stack>
-
-          <Stack direction="row" spacing={3} width={1}>
-            <Stack width={1}>
-              <TextField
-                fullWidth
-                size="small"
                 name="entryPoint"
                 label="Point d'entrée à Lomé"
                 variant="outlined"

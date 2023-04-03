@@ -35,7 +35,6 @@ export default function PersonalInfo({ handleNext }) {
               <TextField
                 fullWidth
                 name="prenom"
-                size="small"
                 label="Prénoms"
                 variant="outlined"
                 value={personalInfo.prenom}
@@ -48,7 +47,6 @@ export default function PersonalInfo({ handleNext }) {
                 fullWidth
                 name="nom"
                 label="Nom"
-                size="small"
                 variant="outlined"
                 value={personalInfo.nom}
                 onChange={handleChange}
@@ -59,12 +57,11 @@ export default function PersonalInfo({ handleNext }) {
 
           <Stack direction="row" spacing={3} width={1}>
             <Stack width={1}>
-              <FormControl size="small" fullWidth variant="outlined" required>
+              <FormControl fullWidth variant="outlined" required>
                 <InputLabel id="pays-label">Pays</InputLabel>
                 <Select
                   labelId="pays-label"
                   name="pays"
-                  size="small"
                   value={personalInfo.pays}
                   onChange={handleChange}
                   label="Country"
@@ -84,7 +81,6 @@ export default function PersonalInfo({ handleNext }) {
               <TextField
                 fullWidth
                 name="telephone"
-                size="small"
                 label="Numéro de téléphone"
                 variant="outlined"
                 value={personalInfo.telephone}
@@ -99,7 +95,6 @@ export default function PersonalInfo({ handleNext }) {
               <TextField
                 fullWidth
                 name="email"
-                size="small"
                 label="Email"
                 variant="outlined"
                 value={personalInfo.email}
@@ -108,12 +103,11 @@ export default function PersonalInfo({ handleNext }) {
               />
             </Stack>
             <Stack width={1}>
-              <FormControl size="small" fullWidth variant="outlined" required>
+              <FormControl fullWidth variant="outlined" required>
                 <InputLabel id="poste_id">Poste</InputLabel>
                 <Select
                   labelId="poste_label"
                   name="poste"
-                  size="small"
                   value={personalInfo.poste}
                   onChange={handleChange}
                   label="Post"
@@ -133,12 +127,11 @@ export default function PersonalInfo({ handleNext }) {
 
           <Stack direction="row" spacing={3} width={1}>
             <Stack width={1}>
-              <FormControl size="small" fullWidth variant="outlined" required>
+              <FormControl fullWidth variant="outlined" required>
                 <InputLabel id="zone_id">Zone</InputLabel>
                 <Select
                   labelId="zone_label"
                   name="zone"
-                  size="small"
                   value={personalInfo.zone}
                   onChange={handleChange}
                   label="Zone"
@@ -155,12 +148,11 @@ export default function PersonalInfo({ handleNext }) {
               </FormControl>
             </Stack>
             <Stack width={1}>
-              <FormControl size="small" fullWidth variant="outlined" required>
+              <FormControl fullWidth variant="outlined" required>
                 <InputLabel id="division_id">Division</InputLabel>
                 <Select
                   labelId="division_label"
                   name="division"
-                  size="small"
                   value={personalInfo.division}
                   onChange={handleChange}
                   label="Division"
@@ -186,7 +178,6 @@ export default function PersonalInfo({ handleNext }) {
               fullWidth
               name="disposition"
               multiline
-              size="small"
               minRows={4}
               label="Disposition particulière"
               variant="outlined"

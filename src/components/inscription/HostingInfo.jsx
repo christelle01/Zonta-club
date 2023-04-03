@@ -9,6 +9,9 @@ import {
   FormControlLabel,
 } from "@mui/material";
 import { useSignUpFormContext } from "./Inscription";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 export default function HostingInfo({ handleNext, handlePrev }) {
   const { values, onChange } = useSignUpFormContext();
@@ -37,7 +40,6 @@ export default function HostingInfo({ handleNext, handlePrev }) {
               <TextField
                 fullWidth
                 name="hotelName"
-                size="small"
                 label="Choisir son hotel"
                 variant="outlined"
                 value={hostingInfo.hotelName}
@@ -49,31 +51,35 @@ export default function HostingInfo({ handleNext, handlePrev }) {
 
           <Stack direction="row" spacing={3} width={1}>
             <Stack width={1}>
-              <TextField
-                fullWidth
-                size="small"
-                name="entryDate"
-                label="Date d'entrée à l'hôtel"
-                variant="outlined"
-                value={hostingInfo.entryDate}
-                onChange={handleChange}
-                required
-              />
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  fullWidth
+                  name="entryDate"
+                  size="small"
+                  label="Date d'entrée à l'hôtel"
+                  variant="outlined"
+                  value={hostingInfo.entryDate}
+                  onChange={(val) => onChange("hosting.entryDate", val)}
+                  required
+                />
+              </LocalizationProvider>
             </Stack>
           </Stack>
 
           <Stack direction="row" spacing={3} width={1}>
             <Stack width={1}>
-              <TextField
-                fullWidth
-                size="small"
-                name="checkOut"
-                label="Date de départ de l'hôtel"
-                variant="outlined"
-                value={hostingInfo.checkOut}
-                onChange={handleChange}
-                required
-              />
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  fullWidth
+                  name="checkOut"
+                  size="small"
+                  label="Date de départ de l'hôtel"
+                  variant="outlined"
+                  value={hostingInfo.checkOut}
+                  onChange={(val) => onChange("hosting.checkOut", val)}
+                  required
+                />
+              </LocalizationProvider>
             </Stack>
           </Stack>
 

@@ -22,15 +22,15 @@ const initialState = {
     disposition: "",
   },
   travel: {
-    arrivalDate: "",
-    returnDate: "",
+    arrivalDate: null,
+    returnDate: null,
     entryPoint: "",
     leaveAtLome: false,
   },
   hosting: {
     hotelName: "",
-    entryDate: "",
-    checkOut: "",
+    entryDate: null,
+    checkOut: null,
     personlResidence: false,
   },
 };
