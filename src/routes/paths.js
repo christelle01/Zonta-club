@@ -9,12 +9,12 @@ function path(root, sublink) {
   
   
   export const PATH_PAGE = {
-    home: '/home',
-    schedules: '/schedules',
-    gallery: '/gallery',
+    accueil: '/accueil',
+    programme: '/programme',
+    galerie: '/galerie',
     hotels: '/hotels',
     inscription: '/inscription',
-    contact: '/contact-us',
+    contact: '/contact',
   };
   
   

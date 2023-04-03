@@ -65,17 +65,17 @@ const NavigationMenu = () => {
             </Link>
             <Button color="inherit">
               <Link to="/" className={classes.title}>
-                HOME
+                Accueil
               </Link>
             </Button>
             <Button color="inherit">
-              <Link to="/schedules" className={classes.title}>
-                SCHEDULES
+              <Link to="/programme" className={classes.title}>
+                PROGRAMME
               </Link>
             </Button>
             <Button color="inherit">
-              <Link to="/gallery" className={classes.title}>
-                GALLERY
+              <Link to="/galerie" className={classes.title}>
+                GALERIE
               </Link>
             </Button>
             <Button color="inherit">
@@ -101,7 +101,7 @@ const NavigationMenu = () => {
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
               >
-                <i className='fa fa-globe'></i> LANGUAGES
+                <i className='fa fa-globe'></i> LANGUES
               </Button>
               <Menu
                 id="basic-menu"

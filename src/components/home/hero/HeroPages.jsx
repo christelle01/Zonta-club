@@ -9,7 +9,7 @@ const Back = ({ title }) => {
     <>
       <section className='back'>
         <Stack height={1} width={1} justifyContent='center' alignItems='center'>
-          <h2>Home / {location.pathname.split("/")[1]}</h2>
+          <h2>Accueil / {location.pathname.split("/")[1]}</h2>
           <h1>{title}</h1>
         </Stack>
       </section>

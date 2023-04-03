@@ -26,15 +26,15 @@ export default function Router() {
   return useRoutes([
     {
       path: "/",
-      element: <Home />,
+      element: <Accueil />,
     },
     {
-      path: "schedules",
-      element: <Schedules />,
+      path: "programme",
+      element: <Programme />,
     },
     {
-      path: "gallery",
-      element: <Gallery />,
+      path: "galerie",
+      element: <Galerie />,
     },
     {
       path: "hotels",
@@ -51,9 +51,9 @@ export default function Router() {
   ]);
 }
 
-const Home = Loadable(lazy(() => import("../components/home/Home")));
-const Schedules = Loadable(lazy(() => import("../components/home/HSchedules")));
-const Gallery = Loadable(lazy(() => import("../components/home/HGallery")));
+const Accueil = Loadable(lazy(() => import("../components/home/Home")));
+const Programme = Loadable(lazy(() => import("../components/home/HSchedules")));
+const Galerie = Loadable(lazy(() => import("../components/home/HGallery")));
 const Hotels = Loadable(lazy(() => import("../components/home/HHotels")));
 const Inscription = Loadable(lazy(() => import("../components/home/HInscription")));
 const Contact = Loadable(lazy(() => import("../components/home/HContact")));
