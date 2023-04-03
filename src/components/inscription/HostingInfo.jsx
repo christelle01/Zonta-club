@@ -89,7 +89,7 @@ export default function TravelInfo({ handleNext }) {
                     ':hover': { bgcolor: themeColors.PRIMARY },
                   }}
                 >
-                  Next
+                  Suivant
                 </Button>
               </Stack>
             </Stack>

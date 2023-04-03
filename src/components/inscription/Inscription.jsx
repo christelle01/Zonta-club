@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import PersonalInfo from './PersonalInfo';
 import TravelInfo from './TravelInfo';
 import HostingInfo from './HostingInfo';
+import Summary from './Summary';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -38,7 +39,7 @@ export default function Inscription() {
 
 
   return (
-    <Stack width={1} justifyContent='center' alignItems='center' p={2}>
+    <Stack width={1} justifyContent='center' alignItems='center' py={10}>
 
         <Stack width={1} direction='row' spacing={3} justifyContent='center'>
             <TabButton title='Information Personnelle' value={0} selected={currentTab === 0} onClick={setCurrentTab} />
@@ -50,7 +51,7 @@ export default function Inscription() {
        {currentTab ===0 && <TabPanel>  <PersonalInfo handleNext={handleNext} /> </TabPanel>}
        {currentTab ===1 && <TabPanel>  <TravelInfo handleNext={handleNext} /> </TabPanel>}
        {currentTab ===2 && <TabPanel>  <HostingInfo handleNext={handleNext} /> </TabPanel>}
-       {currentTab ===3 && <TabPanel> 04 </TabPanel>}
+       {currentTab ===3 && <TabPanel>  <Summary handleNext={handleNext} /> </TabPanel>}
 
     </Stack>
   )

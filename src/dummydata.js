@@ -422,17 +422,17 @@ export const rows = [
 
 export const PROGRAM = [
   {
-    daytitle: "Day 01",
-    daydate: "24 May",
+    daytitle: "Jour 01",
+    daydate: "19 Oct",
   },
   {
-    daytitle: "Day 02",
-    daydate: "25 May",
+    daytitle: "Jour 02",
+    daydate: "20 Oct",
   },{
-    daytitle: "Day 03",
-    daydate: "26 May",
+    daytitle: "Jour 03",
+    daydate: "21 Oct",
   },{
-    daytitle: "Day 04",
-    daydate: "25 May",
+    daytitle: "Jour 04",
+    daydate: "22 Oct",
   },
 ]

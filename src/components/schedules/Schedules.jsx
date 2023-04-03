@@ -21,12 +21,12 @@ export default function Types() {
   return (
    <RootStyle>
     <Container>
-    <Box sx={{ width: '100%', textAlign: "center"}}>
+    <Box sx={{ width: '100%', textAlign: "center"}} py={10}>
       
-      <Typography variant="h2" color={"#802528"} gutterBottom>Event Schedules</Typography>
+      <Typography variant="h2" color={"#802528"} gutterBottom>Programme des évènements</Typography>
     
       <Typography variant="subtitle1" gutterBottom>
-      In the program, Conferences-workshops; Speech contest; hall of fame; Election of District 94 Officers for the upcoming term; Gala dinner and networking, everything has been concocted to make you live a wonderful experience, in the beautiful city of Lomé.
+        Au programme, Conférences-ateliers ; Concours de discours; Temple de la renommée; Élection des Officiers du District 94 pour le prochain mandat ; Dîner de gala et networking, tout a été concocté pour vous faire vivre une merveilleuse expérience, dans la belle ville de Lomé.      
       </Typography>
       
       <Stack width={1} direction="row" justifyContent={'center'} spacing={4} py={5}>

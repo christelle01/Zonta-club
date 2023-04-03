@@ -1,8 +1,4 @@
-.contacts iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
+
 .contacts .right {
   padding: 50px;
 }
@@ -41,15 +37,4 @@ form .flexSB input:nth-child(1) {
   font-weight: 600;
   font-size: 15px;
   word-spacing: 5px;
-}
-@media screen and (max-width: 768px) {
-  .contacts .container {
-    flex-direction: column;
-  }
-  .contacts iframe {
-    height: 50vh;
-  }
-  .contacts .row {
-    width: 100%;
-  }
 }

@@ -89,7 +89,7 @@ export default function TravelInfo({ handleNext }) {
                     ':hover': { bgcolor: themeColors.PRIMARY },
                   }}
                 >
-                  Suivant
+                  Enregistrer
                 </Button>
               </Stack>
             </Stack>
