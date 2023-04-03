@@ -1,15 +1,8 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import {
-  TextField,
-  Button,
-  Typography,
-  Container,
-  Grid,
-} from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
+import { TextField, Button, Typography, Container, Grid } from "@mui/material";
 import { Stack } from "@mui/material";
-import { themeColors } from '../../constant/themeColors';
-
+import { themeColors } from "../../constant/themeColors";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,77 +31,76 @@ const Contact = () => {
   return (
     <Container className={classes.root}>
       <Stack py={10}>
-      <Grid container justifyContent="center">
-        <Grid item xs={12} sm={8} md={6}>
-          <div className={classes.form}>
-            <Typography variant="h4" align="center" gutterBottom>
-              Contactez-nous
-            </Typography>
-            <Typography align="center">
-              Pour nous faire part de vos demandes, questions, (etc.), veuillez
-              remplir les cases ci-dessous
-            </Typography>
-            <form>
-              <TextField
-                className={classes.textField}
-                fullWidth
-                variant="outlined"
-                label="Nom complet"
-                type="text"
-              />
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    className={classes.textField}
-                    fullWidth
-                    variant="outlined"
-                    label="Email"
-                    type="email"
-                  />
+        <Grid container justifyContent="center">
+          <Grid item xs={12} sm={8} md={6}>
+            <div className={classes.form}>
+              <Typography variant="h4" align="center" gutterBottom>
+                Contactez-nous
+              </Typography>
+              <Typography align="center">
+                Pour nous faire part de vos demandes, questions, (etc.),
+                veuillez remplir les cases ci-dessous
+              </Typography>
+              <form>
+                <TextField
+                  className={classes.textField}
+                  fullWidth
+                  variant="outlined"
+                  label="Nom complet"
+                  type="text"
+                />
+                <Grid container spacing={2}>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      className={classes.textField}
+                      fullWidth
+                      variant="outlined"
+                      label="Email"
+                      type="email"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      className={classes.textField}
+                      fullWidth
+                      variant="outlined"
+                      label="Téléphone"
+                      type="text"
+                    />
+                  </Grid>
                 </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    className={classes.textField}
-                    fullWidth
-                    variant="outlined"
-                    label="Téléphone"
-                    type="text"
-                  />
-                </Grid>
-              </Grid>
-              <TextField
-                className={classes.textField}
-                fullWidth
-                variant="outlined"
-                label="Sujet"
-                type="text"
-              />
-              <TextField
-                className={classes.message}
-                fullWidth
-                variant="outlined"
-                label="Votre message..."
-                multiline
-                rows={6}
-              />
-              <Stack direction="row" width={1} justifyContent="center">
-              <Button
-                className={classes.button}
-                type="submit"
-                  variant="contained"
-                  sx={{
-                    bgcolor: themeColors.PRIMARY,
-                    ':hover': { bgcolor: themeColors.PRIMARY },
-                  }}
-              >
-                ENVOYER
-              </Button>
-              </Stack>
-              
-            </form>
-          </div>
+                <TextField
+                  className={classes.textField}
+                  fullWidth
+                  variant="outlined"
+                  label="Sujet"
+                  type="text"
+                />
+                <TextField
+                  className={classes.message}
+                  fullWidth
+                  variant="outlined"
+                  label="Votre message..."
+                  multiline
+                  rows={6}
+                />
+                <Stack direction="row" width={1} justifyContent="center">
+                  <Button
+                    className={classes.button}
+                    type="submit"
+                    variant="contained"
+                    sx={{
+                      bgcolor: themeColors.PRIMARY,
+                      ":hover": { bgcolor: themeColors.PRIMARY },
+                    }}
+                  >
+                    ENVOYER
+                  </Button>
+                </Stack>
+              </form>
+            </div>
+          </Grid>
         </Grid>
-      </Grid>
       </Stack>
     </Container>
   );
