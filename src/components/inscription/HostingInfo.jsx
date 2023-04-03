@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { useSignUpFormContext } from "./Inscription";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { frFR } from "@mui/x-date-pickers/locales";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
@@ -51,7 +52,13 @@ export default function HostingInfo({ handleNext, handlePrev }) {
 
           <Stack direction="row" spacing={3} width={1}>
             <Stack width={1}>
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <LocalizationProvider
+                dateAdapter={AdapterDayjs}
+                localeText={
+                  frFR.components.MuiLocalizationProvider.defaultProps
+                    .localeText
+                }
+              >
                 <DatePicker
                   fullWidth
                   name="entryDate"
@@ -68,7 +75,13 @@ export default function HostingInfo({ handleNext, handlePrev }) {
 
           <Stack direction="row" spacing={3} width={1}>
             <Stack width={1}>
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <LocalizationProvider
+                dateAdapter={AdapterDayjs}
+                localeText={
+                  frFR.components.MuiLocalizationProvider.defaultProps
+                    .localeText
+                }
+              >
                 <DatePicker
                   fullWidth
                   name="checkOut"
