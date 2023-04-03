@@ -2,9 +2,20 @@ import React, { useState } from "react";
 import { Stack } from "@mui/material";
 import TabButton from "../common/custom/tab/TabButton";
 import TabPanel from "../common/custom/tab/TabPanel";
+import { makeStyles } from "@material-ui/core/styles";
 import PersonalInfo from "./PersonalInfo";
 import TravelInfo from "./TravelInfo";
 import HostingInfo from "./HostingInfo";
+import Summary from "./Summary";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& .MuiTextField-root": {
+      margin: theme.spacing(1),
+      width: "50ch",
+    },
+  },
+}));
 
 export default function Inscription() {
   const [currentTab, setCurrentTab] = useState(0);
@@ -18,7 +29,7 @@ export default function Inscription() {
   };
 
   return (
-    <Stack width={1} justifyContent="center" alignItems="center" p={2}>
+    <Stack width={1} justifyContent="center" alignItems="center" py={10}>
       <Stack width={1} direction="row" spacing={3} justifyContent="center">
         <TabButton
           title="Information Personnelle"
@@ -45,6 +56,31 @@ export default function Inscription() {
           onClick={setCurrentTab}
         />
       </Stack>
+
+      {currentTab === 0 && (
+        <TabPanel>
+          {" "}
+          <PersonalInfo handleNext={handleNext} />{" "}
+        </TabPanel>
+      )}
+      {currentTab === 1 && (
+        <TabPanel>
+          {" "}
+          <TravelInfo handleNext={handleNext} />{" "}
+        </TabPanel>
+      )}
+      {currentTab === 2 && (
+        <TabPanel>
+          {" "}
+          <HostingInfo handleNext={handleNext} />{" "}
+        </TabPanel>
+      )}
+      {currentTab === 3 && (
+        <TabPanel>
+          {" "}
+          <Summary handleNext={handleNext} />{" "}
+        </TabPanel>
+      )}
 
       {currentTab === 0 && (
         <TabPanel>

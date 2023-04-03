@@ -59,14 +59,11 @@ class CountdownTimer extends React.Component {
             alignItems="center"
           >
             <Stack width={1} justifyContent="center" alignItems="center">
-              <Typography variant="h3" color="green">
-                {days}
-              </Typography>
+              <Typography variant="h3">{days}</Typography>
               <Typography variant="subtitle1">Jours</Typography>
             </Stack>
 
             <Typography variant="h3" component="span">
-              {" "}
               :
             </Typography>
 
@@ -80,7 +77,6 @@ class CountdownTimer extends React.Component {
             </Stack>
 
             <Typography variant="h3" component="span">
-              {" "}
               :
             </Typography>
 

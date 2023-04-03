@@ -13,7 +13,7 @@ import { themeColors } from '../../constant/themeColors';
 
 export default function TravelInfo({ handleNext }) {
   const [travelInfo, setTravelInfo] = useState({
-    arrival: '',
+    arrivalDate: '',
     returnDate: '',
     entryPoint: '',
   });
@@ -41,10 +41,10 @@ export default function TravelInfo({ handleNext }) {
               <Stack width={1}>
                 <TextField
                   fullWidth
-                  name="arrival"
+                  name="arrivalDate"
                   label="Date d'arrivée à Lomé"
                   variant="outlined"
-                  value={travelInfo.arrival}
+                  value={travelInfo.arrivalDate}
                   onChange={handleChange}
                   required
                 />
@@ -89,7 +89,7 @@ export default function TravelInfo({ handleNext }) {
                     ':hover': { bgcolor: themeColors.PRIMARY },
                   }}
                 >
-                  Next
+                  Suivant
                 </Button>
               </Stack>
             </Stack>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Paper, Stack, TextField, MenuItem, Button, FormControl, InputLabel, Select } from '@mui/material';
+import { Container, Paper, Stack, TextField, MenuItem, Button, FormControl, InputLabel, Select, Typography } from '@mui/material';
 import { countries } from '../../constant/countries';
 import { posts } from '../../posts';
 import { area } from '../../area';
@@ -131,10 +131,16 @@ console.log(personalInfo);
                     <Stack width={1}>
                         <TextField fullWidth name="disposition" multiline minRows={4} label="Disposition particulière" variant="outlined" value={personalInfo.disposition} onChange={handleChange} required />
                     </Stack>
+                    
+                    <Stack>
+                    <Typography>
+                    Après inscription vous serez redirigé vers la page de paiement pour valider votre inscription.
+                    </Typography>
+                    </Stack>
 
                     <Stack direction='row' width={1} justifyContent='flex-end'>
                         <Stack width={300}>
-                            <Button type="submit" variant="contained" sx={{ bgcolor: themeColors.PRIMARY, ':hover': { bgcolor: themeColors.PRIMARY} }}>Next</Button>
+                            <Button type="submit" variant="contained" sx={{ bgcolor: themeColors.PRIMARY, ':hover': { bgcolor: themeColors.PRIMARY} }}>Suivant</Button>
                         </Stack>
                     </Stack>
                 </Stack>

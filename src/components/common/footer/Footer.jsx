@@ -7,10 +7,10 @@ const Footer = () => {
       <section className='newletter'>
         <div className='container flexSB'>
           <div className='left row'>
-            <h1>Verification of your registration</h1>
+            <h1>Vérification de votre inscription</h1>
           </div>
           <div className='right row'>
-            <input type='text' placeholder='Enter email address' />
+            <input type='text' placeholder='Entrer votre adresse email' />
             <i className='fa fa-paper-plane'></i>
           </div>
         </div>
@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
         </div>
         <p>
-          Copyright ©2023 All rights reserved | by <a href="https://okydook.com">OKYDOOK</a>
+          Copyright ©2023 Tous droits réservés | Développé par <a href="https://okydook.com">OKYDOOK</a>
         </p>
       </div>
     </>

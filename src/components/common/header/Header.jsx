@@ -69,7 +69,7 @@ const NavigationMenu = () => {
             </Link>
             <Button color="inherit">
               <Link to="/" className={classes.title}>
-                Accueil
+                ACCUEIL
               </Link>
             </Button>
             <Button color="inherit">
