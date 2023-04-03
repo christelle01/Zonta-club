@@ -47,7 +47,7 @@ class CountdownTimer extends React.Component {
                           {days}
                       </Typography>
                       <Typography variant="subtitle1" >
-                          Days
+                          Jours
                       </Typography>
                     </Stack>
               
@@ -58,7 +58,7 @@ class CountdownTimer extends React.Component {
                         {hours}
                     </Typography>
                     <Typography variant="subtitle1" component="span">
-                        Hours
+                        Heures
                     </Typography>
                   </Stack>
               
@@ -69,7 +69,7 @@ class CountdownTimer extends React.Component {
                         {minutes}
                     </Typography>
                     <Typography variant="subtitle1" component="span">
-                        minutes
+                        Minutes
                     </Typography>
                   </Stack>
             
@@ -80,10 +80,9 @@ class CountdownTimer extends React.Component {
                         {seconds}
                     </Typography>
                     <Typography variant="subtitle1" component="span">
-                        seconds
+                        Secondes
                     </Typography>
                   </Stack>
-          
                 </Stack>
             </Box>
         </Stack>

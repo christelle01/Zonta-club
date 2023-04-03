@@ -38,17 +38,17 @@ console.log(personalInfo);
                 <Stack width={1} spacing={4}>
                     <Stack direction='row' width={1} spacing={3}>
                         <Stack width={1}>
-                            <TextField fullWidth name="nom" label="First Name" variant="outlined" value={personalInfo.nom} onChange={handleChange} required />
+                            <TextField fullWidth name="nom" label="Prénoms" variant="outlined" value={personalInfo.nom} onChange={handleChange} required />
                         </Stack>
                         <Stack width={1}>
-                            <TextField fullWidth name="prenom" label="Last name" variant="outlined" value={personalInfo.prenom} onChange={handleChange} required />
+                            <TextField fullWidth name="prenom" label="Nom" variant="outlined" value={personalInfo.prenom} onChange={handleChange} required />
                         </Stack>
                     </Stack>
 
                     <Stack direction='row' spacing={3} width={1}>
                         <Stack width={1}>
                             <FormControl fullWidth  variant="outlined" required>
-                                <InputLabel id="pays-label">Country</InputLabel>
+                                <InputLabel id="pays-label">Pays</InputLabel>
                                 <Select
                                 labelId="pays-label"
                                 name="pays"
@@ -57,14 +57,14 @@ console.log(personalInfo);
                                 label="Country"
                                 >
                                 <MenuItem value="">
-                                    <em>Select your country</em>
+                                    <em>Choisir son pays</em>
                                 </MenuItem>
                                 {countries.map((cont) => (<MenuItem key={cont.label} value={cont.label}>{cont.label}</MenuItem>))}
                                 </Select>
                             </FormControl>
                         </Stack>
                         <Stack width={1}>
-                            <TextField fullWidth name="telephone" label="Telephone with area code" variant="outlined" value={personalInfo.telephone} onChange={handleChange} required />
+                            <TextField fullWidth name="telephone" label="Numéro de téléphone" variant="outlined" value={personalInfo.telephone} onChange={handleChange} required />
                         </Stack>
                     </Stack>
 
@@ -74,7 +74,7 @@ console.log(personalInfo);
                         </Stack>
                         <Stack width={1}>
                             <FormControl fullWidth  variant="outlined" required>
-                                <InputLabel id="poste_id">Post</InputLabel>
+                                <InputLabel id="poste_id">Poste</InputLabel>
                                 <Select
                                 labelId="poste_label"
                                 name="poste"
@@ -83,7 +83,7 @@ console.log(personalInfo);
                                 label="Post"
                                 >
                                 <MenuItem value="">
-                                    <em>Select your post</em>
+                                    <em>Choisir son poste</em>
                                 </MenuItem>
                                 {posts.map((post, index) => (<MenuItem key={post.value +index} value={post.value}>{post.value}</MenuItem>))}
                                 </Select>
@@ -103,7 +103,7 @@ console.log(personalInfo);
                                 label="Zone"
                                 >
                                 <MenuItem value="">
-                                    <em>Select your area</em>
+                                    <em>Choisir sa zone</em>
                                 </MenuItem>
                                 {area.map((are, index) => (<MenuItem key={are.value +index} value={are.value}>{are.value}</MenuItem>))}
                                 </Select>
@@ -120,7 +120,7 @@ console.log(personalInfo);
                                 label="Division"
                                 >
                                 <MenuItem value="">
-                                    <em>Select your division</em>
+                                    <em>Choisir sa division</em>
                                 </MenuItem>
                                 {divisions.map((division, index) => (<MenuItem key={division.value +index} value={division.value}>{division.value}</MenuItem>))}
                                 </Select>
@@ -129,7 +129,7 @@ console.log(personalInfo);
                     </Stack>
 
                     <Stack width={1}>
-                        <TextField fullWidth name="disposition" multiline minRows={4} label="Particular disposition" variant="outlined" value={personalInfo.disposition} onChange={handleChange} required />
+                        <TextField fullWidth name="disposition" multiline minRows={4} label="Disposition particulière" variant="outlined" value={personalInfo.disposition} onChange={handleChange} required />
                     </Stack>
 
                     <Stack direction='row' width={1} justifyContent='flex-end'>
