@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from "react";
 import {
   Container,
   Paper,
@@ -7,94 +7,123 @@ import {
   Button,
   Checkbox,
   FormControlLabel,
-} from '@mui/material';
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem
+} from "@mui/material";
+import { useSignUpFormContext } from "./Inscription";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { frFR } from "@mui/x-date-pickers/locales";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
-import { themeColors } from '../../constant/themeColors';
+import { ENTRYPOINT } from "../../dummydata";
 
-export default function HostingInfo({ handleNext }) {
-  const [hostingInfo, setHostingInfo] = useState({
-    hotelName: '',
-    entryDate: '',
-    checkOut: '',
-  });
+export default function HostingInfo({ handleNext, handlePrev }) {
+  const { values, onChange } = useSignUpFormContext();
+  const hostingInfo = values.hosting;
 
   const handleChange = (e) => {
-    setHostingInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    onChange(`hosting.${e.target.name}`, e.target.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    handleNext();
-  };
-
-  console.log(hostingInfo);
   return (
     <Container>
       <Paper elevation={0} sx={{ p: 3 }}>
-        <form noValidate autoComplete="off" onSubmit={handleSubmit}>
-          <Stack width={1} spacing={4}>
-            <FormControlLabel
-              control={<Checkbox />}
-              label="Résidence personnelle"
-            />
-            <Stack direction="row" spacing={3} width={1}>
-              <Stack width={1}>
-                <TextField
-                  fullWidth
-                  name="arrival"
-                  label="Choisir son hotel"
-                  variant="outlined"
+        <Stack width={1} spacing={4}>
+          <FormControlLabel
+            control={<Checkbox />}
+            name="personlResidence"
+            label="Résidence personnelle"
+            checked={hostingInfo.personlResidence}
+            onChange={(e) =>
+              onChange(`hosting.${e.target.name}`, e.target.checked)
+            }
+          />
+
+          <Stack direction="row" spacing={3} width={1}>
+            <Stack width={1}>
+            <FormControl fullWidth variant="outlined" required>
+                <InputLabel id="title">Point d'entrée à Lomé</InputLabel>
+                <Select
+                  labelId="hotelName"
+                  name="hotelName"
                   value={hostingInfo.hotelName}
                   onChange={handleChange}
-                  required
-                />
-              </Stack>
+                  label="hotelName"
+                >
+                  {ENTRYPOINT.map((ent) => (<MenuItem key={ent.title} value={ent.title}>{ent.title}</MenuItem>))}
+                </Select>
+              </FormControl>
             </Stack>
+          </Stack>
 
-            <Stack direction="row" spacing={3} width={1}>
-              <Stack width={1}>
-                <TextField
+          <Stack direction="row" spacing={3} width={1}>
+            <Stack width={1}>
+              <LocalizationProvider
+                dateAdapter={AdapterDayjs}
+                localeText={
+                  frFR.components.MuiLocalizationProvider.defaultProps
+                    .localeText
+                }
+              >
+                <DatePicker
                   fullWidth
-                  name="returnDate"
+                  name="entryDate"
+                  size="small"
                   label="Date d'entrée à l'hôtel"
                   variant="outlined"
                   value={hostingInfo.entryDate}
-                  onChange={handleChange}
+                  onChange={(val) => onChange("hosting.entryDate", val)}
                   required
                 />
-              </Stack>
+              </LocalizationProvider>
             </Stack>
+          </Stack>
 
-            <Stack direction="row" spacing={3} width={1}>
-              <Stack width={1}>
-                <TextField
+          <Stack direction="row" spacing={3} width={1}>
+            <Stack width={1}>
+              <LocalizationProvider
+                dateAdapter={AdapterDayjs}
+                localeText={
+                  frFR.components.MuiLocalizationProvider.defaultProps
+                    .localeText
+                }
+              >
+                <DatePicker
                   fullWidth
-                  name="entryPoint"
+                  name="checkOut"
+                  size="small"
                   label="Date de départ de l'hôtel"
                   variant="outlined"
                   value={hostingInfo.checkOut}
-                  onChange={handleChange}
+                  onChange={(val) => onChange("hosting.checkOut", val)}
                   required
                 />
-              </Stack>
-            </Stack>
-
-            <Stack direction="row" width={1} justifyContent="flex-end">
-              <Stack width={300}>
-                <Button
-                  type="submit"
-                  variant="contained"
-                  sx={{
-                    bgcolor: themeColors.PRIMARY,
-                    ':hover': { bgcolor: themeColors.PRIMARY },
-                  }}
-                >
-                  Suivant
-                </Button>
-              </Stack>
+              </LocalizationProvider>
             </Stack>
           </Stack>
-        </form>
+
+          <Stack
+            direction="row"
+            width={1}
+            justifyContent="flex-end"
+            spacing={2}
+          >
+            <Stack width={200}>
+              <Button onClick={handlePrev} variant="outlined">
+                précédent
+              </Button>
+            </Stack>
+
+            <Stack width={200}>
+              <Button variant="contained" onClick={handleNext}>
+                Suivant
+              </Button>
+            </Stack>
+          </Stack>
+        </Stack>
       </Paper>
     </Container>
   );
