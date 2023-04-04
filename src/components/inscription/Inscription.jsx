@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Stack, TextField, Button, FormControl, InputLabel, Select, MenuItem, Container } from '@mui/material';
 import TabButton from '../common/custom/tab/TabButton';
 import TabPanel from '../common/custom/tab/TabPanel';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/styles';
 import PersonalInfo from './PersonalInfo';
 import TravelInfo from './TravelInfo';
 import HostingInfo from './HostingInfo';
