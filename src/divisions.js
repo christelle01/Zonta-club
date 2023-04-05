@@ -54,6 +54,6 @@ export const divisions = [
         value : 'Division R',
     },
     {
-        value : 'Guest/Other',
+        value : 'Invité/Autres',
     },
 ]

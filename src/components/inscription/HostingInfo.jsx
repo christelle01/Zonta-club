@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   Paper,
@@ -18,11 +18,19 @@ import { frFR } from "@mui/x-date-pickers/locales";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
-import { ENTRYPOINT } from "../../dummydata";
+import { HOTELSNAME } from "../../dummydata";
+import { HOTELSNAME1 } from "../../dummydata";
+import { HOTELSNAME2 } from "../../dummydata";
+
 
 export default function HostingInfo({ handleNext, handlePrev }) {
   const { values, onChange } = useSignUpFormContext();
   const hostingInfo = values.hosting;
+
+  // états locaux pour les noms d'hôtels choisis pour chaque catégorie
+  const [grandHotelName, setGrandHotelName] = useState("Grand Hôtel");
+  const [moyenHotelName, setMoyenHotelName] = useState("Moyen Hôtel");
+  const [petitHotelName, setPetitHotelName] = useState("Petit Hôtel");
 
   const handleChange = (e) => {
     onChange(`hosting.${e.target.name}`, e.target.value);
@@ -44,19 +52,36 @@ export default function HostingInfo({ handleNext, handlePrev }) {
 
           <Stack direction="row" spacing={3} width={1}>
             <Stack width={1}>
-            <FormControl fullWidth variant="outlined" required>
-                <InputLabel id="title">Point d'entrée à Lomé</InputLabel>
+              <FormControl variant="outlined">
+                <InputLabel id="noms">Choisir son hotel</InputLabel>
                 <Select
-                  labelId="hotelName"
-                  name="hotelName"
-                  value={hostingInfo.hotelName}
-                  onChange={handleChange}
-                  label="hotelName"
+                labelId="noms"
+                name="noms"
+                value={hostingInfo.hotelCategory}
+                onChange={(e) => {
+                  onChange("hosting.hotelCategory", e.target.value);
+                  // Mettre à jour les noms d'hôtels choisis en fonction de la catégorie
+                  const category = e.target.value;
+                  setGrandHotelName(HOTELSNAME[category].grandHotel);
+                  setMoyenHotelName(HOTELSNAME[category].moyenHotel);
+                  setPetitHotelName(HOTELSNAME[category].petitHotel);
+                }}
+                label="noms"
+                native
                 >
-                  {ENTRYPOINT.map((ent) => (<MenuItem key={ent.title} value={ent.title}>{ent.title}</MenuItem>))}
+                  <optgroup label={grandHotelName}>
+                  {HOTELSNAME.map((hot) => (<option key={hot.noms} value={hot.noms}>{hot.noms}</option>))}
+                  </optgroup>
+                  <optgroup label={moyenHotelName}>
+                  {HOTELSNAME1.map((hot) => (<option key={hot.noms} value={hot.noms}>{hot.noms}</option>))}
+                  </optgroup>
+                  <optgroup label={petitHotelName}>
+                  {HOTELSNAME2.map((hot) => (<option key={hot.noms} value={hot.noms}>{hot.noms}</option>))}
+                  </optgroup>
                 </Select>
               </FormControl>
             </Stack>
+
           </Stack>
 
           <Stack direction="row" spacing={3} width={1}>
@@ -128,3 +153,15 @@ export default function HostingInfo({ handleNext, handlePrev }) {
     </Container>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -110,9 +110,76 @@ export const ENTRYPOINT = [
 
 export const HOTELSNAME = [
   {
-    title: "Aéroport gnassingbé eyadema",
+    noms: "Hôtel 2 Février Standard (double) 65.000 Fcfa",
   },
   {
-    title: "Arrivée par route",
+    noms: "Hôtel 2 Février Standard + (double) 75.000 Fcfa",
+  },
+  {
+    noms: "Hôtel Sarakawa Standard (double) 91.000 Fcfa",
+  },
+  {
+    noms: "Hôtel Sarakawa Standard + (double) 171.000 Fcfa",
+  },
+  {
+    noms: " Hôtel Onomo Standard (double) 49.510 Fcfa",
+  },
+  {
+    noms: "Hôtel Onomo Standard + (double) 57.122 Fcfa",
+  },
+  {
+    noms: "Hôtel ANHUI Standard (double) 41.000 Fcfa",
+  },
+  {
+    noms: "Hôtel ANHUI Standard + (double) 47.000 Fcfa",
+  },
+  {
+    noms: "Hôtel Pélican Standard (double) 48.000 Fcfa",
+  },
+  {
+    noms: "Hôtel Pélican Standard (single) 37.000 Fcfa",
+  },
+  {
+    noms: "Hôtel du Golfe Standard (double) 70.000 Fcfa",
+  },
+  {
+    noms: "Blue turtle Standard (double) 100.000 Fcfa",
+  },
+  {
+    noms: "Blue turtle Standard + (double) 120.000 Fcfa",
+  },
+  {
+    noms: "Hotel AHODIKPE Standard (double) 45.000 Fcfa",
+  },
+]
+
+
+export const HOTELSNAME1 = [
+  {
+    noms: "key Boutique Hôtel 45.000 Fcfa",
+  },
+  {
+    noms: "key Boutique Hôtel 75.000 Fcfa",
+  },
+  {
+    noms: "Hôtel la pointe des antilles 31.000 Fcfa",
+  },
+  {
+    noms: "Hôtel la pointe des antilles 61.000 Fcfa",
+  },
+]
+
+export const HOTELSNAME2 = [
+  {
+    noms: "SCI ROSALIE'S Appartement de 1 Chambre 40.000 Fcfa",
+  },
+  {
+    noms: "SCI ROSALIE'S Appartement de 1 Chambre 75.000 Fcfa",
+  },
+  {
+    noms: "SCI ROSALIE'S Appartement de 2 Chambres 115.000 Fcfa",
+  },
+  {
+    noms: "SCI ROSALIE'S Appartement de 2 Chambres 150.000 Fcfa",
   },
 ]

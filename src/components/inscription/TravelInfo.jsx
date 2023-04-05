@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   Paper,
@@ -22,7 +22,9 @@ import { ENTRYPOINT } from "../../dummydata";
 export default function TravelInfo({ handleNext, handlePrev }) {
   const { values, onChange } = useSignUpFormContext();
 
-  const travelInfo = values.travel;
+  const [travelInfo, setTravelInfo] = useState({
+    title: "",
+});
 
   const handleChange = (e) => {
     onChange(`travel.${e.target.name}`, e.target.value);
@@ -92,6 +94,8 @@ export default function TravelInfo({ handleNext, handlePrev }) {
               <FormControl fullWidth variant="outlined" required>
                 <InputLabel id="title">Point d'entrée à Lomé</InputLabel>
                 <Select
+                  fullWidth
+                  variant="outlined"
                   labelId="title"
                   name="title"
                   value={travelInfo.entryPoint}
@@ -101,8 +105,6 @@ export default function TravelInfo({ handleNext, handlePrev }) {
                   {ENTRYPOINT.map((ent) => (<MenuItem key={ent.title} value={ent.title}>{ent.title}</MenuItem>))}
                 </Select>
               </FormControl>
-
-
             </Stack>
           </Stack>
 
