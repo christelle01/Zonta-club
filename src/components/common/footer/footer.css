@@ -124,3 +124,7 @@ footer .last i {
 .social i {
   margin: 0 10px;
 }
+
+.logo img {
+  display: initial;
+}
