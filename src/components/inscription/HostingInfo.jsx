@@ -32,9 +32,6 @@ export default function HostingInfo({ handleNext, handlePrev }) {
   const [moyenHotelName, setMoyenHotelName] = useState("Moyen Hôtel");
   const [petitHotelName, setPetitHotelName] = useState("Petit Hôtel");
 
-  const handleChange = (e) => {
-    onChange(`hosting.${e.target.name}`, e.target.value);
-  };
 
   return (
     <Container>

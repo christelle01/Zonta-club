@@ -22,6 +22,7 @@ const initialState = {
     disposition: "",
   },
   travel: {
+    title: "",
     arrivalDate: null,
     returnDate: null,
     entryPoint: "",

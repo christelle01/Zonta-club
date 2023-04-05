@@ -29,7 +29,7 @@ export default function TabButton({title, value, selected=false, onClick}) {
           variant='outlined'
           component={Paper}  
           sx={{
-            mt:-0.1,
+            mt:-0.3,
             width: 0,
             height: 0,
             borderLeft: "12px solid transparent",

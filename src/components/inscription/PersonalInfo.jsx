@@ -140,7 +140,7 @@ console.log(personalInfo);
 
                     <Stack direction='row' width={1} justifyContent='flex-end'>
                         <Stack width={300}>
-                            <Button type="submit" variant="contained" sx={{ bgcolor: themeColors.PRIMARY, ':hover': { bgcolor: themeColors.PRIMARY} }}>Suivant</Button>
+                            <Button onClick={handleNext} variant="contained" >Suivant</Button>
                         </Stack>
                     </Stack>
                 </Stack>

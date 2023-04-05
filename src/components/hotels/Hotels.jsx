@@ -37,10 +37,11 @@ export default function AccessibleTable() {
                     <TableCell align="left">{row.number}</TableCell>
                     <TableCell align="left">{row.type}</TableCell>
                     <TableCell align="left">{row.price}</TableCell>
-                    <TableCell align="left">{row.link}</TableCell>
+                    <TableCell align="left"><a href={row.link} target='_blank'>{row.link}</a></TableCell>
                   </TableRow>
                 ))}
               </TableBody>
+
             </Table>
           </TableContainer>
         </Stack>

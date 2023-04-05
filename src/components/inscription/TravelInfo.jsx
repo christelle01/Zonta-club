@@ -22,9 +22,7 @@ import { ENTRYPOINT } from "../../dummydata";
 export default function TravelInfo({ handleNext, handlePrev }) {
   const { values, onChange } = useSignUpFormContext();
 
-  const [travelInfo, setTravelInfo] = useState({
-    title: "",
-});
+  const travelInfo = values.travel
 
   const handleChange = (e) => {
     onChange(`travel.${e.target.name}`, e.target.value);
@@ -100,7 +98,7 @@ export default function TravelInfo({ handleNext, handlePrev }) {
                   name="title"
                   value={travelInfo.entryPoint}
                   onChange={handleChange}
-                  label="title"
+                  label="Point d'entrée à Lomé"
                 >
                   {ENTRYPOINT.map((ent) => (<MenuItem key={ent.title} value={ent.title}>{ent.title}</MenuItem>))}
                 </Select>
