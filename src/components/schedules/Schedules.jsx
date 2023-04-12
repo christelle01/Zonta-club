@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Typography, Container, Stack, Paper} from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-import "../../components/schedules/Schedules.css"
 import { PROGRAM } from '../../dummydata';
 
 

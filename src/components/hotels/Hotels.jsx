@@ -11,39 +11,66 @@ const RootStyle = styled('div')(({ theme }) => ({
   },
 }));
 
+const tableCellStyle = {
+  border: '1px solid #0000001a'
+};
+
+function groupRowsByNA(rows) {
+  const groupedRows = rows.reduce((result, row) => {
+    const key = row.na;
+    if (!result[key]) {
+      result[key] = {
+        na: row.na,
+        name: row.name,
+        cells: [],
+      };
+    }
+    result[key].cells.push({
+      type: row.type,
+      price: row.price,
+      link: row.link,
+    });
+    return result;
+  }, {});
+
+  return Object.values(groupedRows);
+}
+
+
 
 export default function AccessibleTable() {
   return (
     <RootStyle>
       <Container>
         <Stack width={1} py={10}>
-          <TableContainer component={Paper} sx={{ paddingBottom: "40" }}>
-            <Table aria-label="caption table">
-              <TableHead>
-                <TableRow>
-                  <TableCell>N/A</TableCell>
-                  <TableCell align="left">Nom</TableCell>
-                  <TableCell align="left">Nombres de chambres disponibles</TableCell>
-                  <TableCell align="left">Type de chambres</TableCell>
-                  <TableCell align="left">Prix ​​Conférence District 18 (Fcfa)</TableCell>
-                  <TableCell align="left">Lien site web ou booking.com</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.map((row) => (
-                  <TableRow key={row.name}>
-                    <TableCell component="th" scope="row">{row.na}</TableCell>
-                    <TableCell align="left">{row.name}</TableCell>
-                    <TableCell align="left">{row.number}</TableCell>
-                    <TableCell align="left">{row.type}</TableCell>
-                    <TableCell align="left">{row.price}</TableCell>
-                    <TableCell align="left"><a href={row.link} target='_blank'>{row.link}</a></TableCell>
+          <Paper sx={{ paddingBottom: "40px", border: "1px solid #0000001a" }}>
+            <TableContainer>
+              <Table aria-label="caption table">
+                <TableHead>
+                  <TableRow>
+                    <TableCell style={tableCellStyle}>N/A</TableCell>
+                    <TableCell align="left" style={tableCellStyle}>Nom</TableCell>
+                    <TableCell align="left" style={tableCellStyle}>Nombres de chambres disponibles</TableCell>
+                    <TableCell align="left" style={tableCellStyle}>Type de chambres</TableCell>
+                    <TableCell align="left" style={tableCellStyle}>Prix ​​Conférence District 18 (Fcfa)</TableCell>
+                    <TableCell align="left" style={tableCellStyle}>Lien site web ou booking.com</TableCell>
                   </TableRow>
-                ))}
-              </TableBody>
-
-            </Table>
-          </TableContainer>
+                </TableHead>
+                <TableBody>
+                  {rows.map((row) => (
+                    <TableRow key={row.name}>
+                      <TableCell component="th" scope="row" style={tableCellStyle}>{row.na}</TableCell>
+                      <TableCell align="left" style={tableCellStyle}>{row.name}</TableCell>
+                      <TableCell align="left" style={tableCellStyle}>{row.number}</TableCell>
+                      <TableCell align="left" style={tableCellStyle}>{row.type}</TableCell>
+                      <TableCell align="left" style={tableCellStyle}>{row.price}</TableCell>
+                      <TableCell align="left" style={tableCellStyle}><a href={row.link} target='_blank'>{row.link}</a></TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+          </Paper>
         </Stack>
       </Container>
     </RootStyle>
