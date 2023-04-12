@@ -42,7 +42,7 @@ const DayCard = ({dayitem, handleSelected, selected, index}) => {
   const {daytitle, daydate} = dayitem
   return (
     <Stack alignItems={'center'} onClick={() => handleSelected(index)} sx={{ cursor: "pointer",  }}>
-      <Stack component={Paper} bgcolor={selected?"#802528":""} height={80} width={80} justifyContent={'center'} textAlign="center">
+      <Stack component={Paper}  bgcolor={selected? "#802528" : "#F6F9FA" }  sx={{ ':hover': { bgcolor: "#802528", color: 'white' }  }} height={80} width={80} justifyContent={'center'} textAlign="center">
         <Typography color={selected ? 'white' : ""}>{daytitle}</Typography>
         <Typography color={selected ? 'white' : ""}>{daydate}</Typography>
       </Stack>

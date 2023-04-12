@@ -1,47 +1,37 @@
-import React, { useState } from 'react'
-import { Container, Paper, Stack, TextField, MenuItem, Button, FormControl, InputLabel, Select, Typography, Autocomplete } from '@mui/material';
+import React from 'react'
+import { Container, Paper, Stack, TextField, Button, FormControl, Typography, Autocomplete } from '@mui/material';
+import { useSignUpFormContext } from "./Inscription";
 import { countries } from '../../constant/countries';
 import { posts } from '../../posts';
 import { area } from '../../area';
-import { themeColors, } from '../../constant/themeColors'
 import { divisions } from '../../divisions';
 
 export default function PersonalInfo({ handleNext }) {
-
-    const [personalInfo, setPersonalInfo] = useState({
-        nom: '',
-        prenom: '',
-        pays: '',
-        telephone: '',
-        email: '',
-        poste: '',
-        zone: '',
-        division: '',
-        disposition: ''
-    });
-
+   const { values, onChange } = useSignUpFormContext();
+   const personalInfo = values.personal;
 
     const handleChange = (e) => {
-        setPersonalInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+        onChange(`personal.${e.target.name}`, e.currentTarget.value)
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        handleNext();
-    }
+    const paysOption = countries.find(option => option.value === personalInfo.pays);
+    const posteOption = posts.find(option => option.value === personalInfo.poste);
+    const divisionOption = divisions.find(option => option.value === personalInfo.division);
+
 
     console.log(personalInfo);
+
     return (
         <Container>
             <Paper elevation={0} sx={{ p: 3 }}>
-                <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+       
                     <Stack width={1} spacing={4}>
                         <Stack direction='row' width={1} spacing={3}>
                             <Stack width={1}>
-                                <TextField fullWidth name="nom" label="Prénoms" variant="outlined" value={personalInfo.nom} onChange={handleChange} required />
+                                <TextField fullWidth name="prenom" label="Prénoms" variant="outlined" value={personalInfo.prenom} onChange={handleChange} required />
                             </Stack>
                             <Stack width={1}>
-                                <TextField fullWidth name="prenom" label="Nom" variant="outlined" value={personalInfo.prenom} onChange={handleChange} required />
+                                <TextField fullWidth name="nom" label="Nom" variant="outlined" value={personalInfo.nom} onChange={handleChange} required />
                             </Stack>
                         </Stack>
 
@@ -50,14 +40,11 @@ export default function PersonalInfo({ handleNext }) {
                                 <FormControl fullWidth variant="outlined" required>
                                     <Autocomplete
                                         id="pays"
+                                        name='pays'
                                         options={countries}
-                                        value={personalInfo.pays}
-                                        onChange={(event, newValue) => {
-                                            handleChange(event);
-                                            setPersonalInfo(prevState => ({
-                                                ...prevState,
-                                                pays: newValue ? newValue.value : ''
-                                            }));
+                                        value={paysOption}
+                                        onChange={(_, newValue) => {
+                                            onChange('personal.pays', newValue.label);
                                         }}
                                         renderInput={(params) => (
                                             <TextField
@@ -65,10 +52,10 @@ export default function PersonalInfo({ handleNext }) {
                                                 label="Pays"
                                                 name="pays"
                                                 variant="outlined"
+                                                required
                                             />
                                         )}
                                     />
-
                                 </FormControl>
                             </Stack>
                             <Stack width={1}>
@@ -85,14 +72,10 @@ export default function PersonalInfo({ handleNext }) {
                                     <Autocomplete
                                         id="poste"
                                         options={posts}
-                                        getOptionLabel={(option) => option.value}
-                                        value={personalInfo.poste}
-                                        onChange={(event, newValue) => {
-                                            handleChange(event);
-                                            setPersonalInfo(prevState => ({
-                                                ...prevState,
-                                                poste: newValue ? newValue.value : ''
-                                            }));
+                                        getOptionLabel={(option) => option.value ? option.value : ""}
+                                        value={posteOption}
+                                        onChange={(_, newValue) => {
+                                             onChange('personal.poste', newValue.value);
                                         }}
                                         renderInput={(params) => (
                                             <TextField
@@ -100,6 +83,7 @@ export default function PersonalInfo({ handleNext }) {
                                                 label="Poste"
                                                 name="poste"
                                                 variant="outlined"
+                                                required
                                             />
                                         )}
                                     />
@@ -111,36 +95,46 @@ export default function PersonalInfo({ handleNext }) {
                         <Stack direction='row' spacing={3} width={1}>
                             <Stack width={1}>
                                 <FormControl fullWidth variant="outlined" required>
-                                    <InputLabel id="zone_id">Zone</InputLabel>
-                                    <Select
-                                        labelId="zone_label"
-                                        name="zone"
-                                        value={personalInfo.zone}
-                                        onChange={handleChange}
-                                        label="Zone"
-                                    >
-                                        <MenuItem value="">
-                                            <em>Choisir sa zone</em>
-                                        </MenuItem>
-                                        {area.map((are, index) => (<MenuItem key={are.value + index} value={are.value}>{are.value}</MenuItem>))}
-                                    </Select>
+                                    <Autocomplete
+                                        id="zone"
+                                        options={area}
+                                        getOptionLabel={(option) => option.value ? option.value : ""}
+                                        value={personalInfo.area}
+                                        onChange={(_, newValue) => {
+                                           onChange('personal.zone', newValue.value);
+                                        }}
+                                        renderInput={(params) => (
+                                            <TextField
+                                                {...params}
+                                                label="Zone"
+                                                name="zone"
+                                                variant="outlined"
+                                                required
+                                            />
+                                        )}
+                                    />
                                 </FormControl>
                             </Stack>
                             <Stack width={1}>
                                 <FormControl fullWidth variant="outlined" required>
-                                    <InputLabel id="division_id">Division</InputLabel>
-                                    <Select
-                                        labelId="division_label"
-                                        name="division"
-                                        value={personalInfo.division}
-                                        onChange={handleChange}
-                                        label="Division"
-                                    >
-                                        <MenuItem value="">
-                                            <em>Choisir sa division</em>
-                                        </MenuItem>
-                                        {divisions.map((division, index) => (<MenuItem key={division.value + index} value={division.value}>{division.value}</MenuItem>))}
-                                    </Select>
+                                    <Autocomplete
+                                        id="division"
+                                        options={divisions}
+                                        getOptionLabel={(option) => option.value ? option.value : ""}
+                                        value={divisionOption}
+                                        onChange={(_, newValue) => {
+                                           onChange('personal.division', newValue.value);
+                                        }}
+                                        renderInput={(params) => (
+                                            <TextField
+                                                {...params}
+                                                label="Division"
+                                                name="division"
+                                                variant="outlined"
+                                                required
+                                            />
+                                        )}
+                                    />
                                 </FormControl>
                             </Stack>
                         </Stack>
@@ -161,7 +155,7 @@ export default function PersonalInfo({ handleNext }) {
                             </Stack>
                         </Stack>
                     </Stack>
-                </form>
+            
             </Paper>
         </Container>
     )

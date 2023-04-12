@@ -15,28 +15,6 @@ const tableCellStyle = {
   border: '1px solid #0000001a'
 };
 
-function groupRowsByNA(rows) {
-  const groupedRows = rows.reduce((result, row) => {
-    const key = row.na;
-    if (!result[key]) {
-      result[key] = {
-        na: row.na,
-        name: row.name,
-        cells: [],
-      };
-    }
-    result[key].cells.push({
-      type: row.type,
-      price: row.price,
-      link: row.link,
-    });
-    return result;
-  }, {});
-
-  return Object.values(groupedRows);
-}
-
-
 
 export default function AccessibleTable() {
   return (

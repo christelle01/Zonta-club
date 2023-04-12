@@ -96,9 +96,9 @@ const Contact = () => {
                 className={classes.button}
                 type="submit"
                   variant="contained"
+                color='primary'
                   sx={{
-                    bgcolor: themeColors.PRIMARY,
-                    ':hover': { bgcolor: themeColors.PRIMARY },
+                    width: 300
                   }}
               >
                 ENVOYER

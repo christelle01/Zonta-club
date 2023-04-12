@@ -29,7 +29,7 @@ const initialState = {
     leaveAtLome: false,
   },
   hosting: {
-    hotelName: "",
+    hotel: {cat: "", noms: ""},
     entryDate: null,
     checkOut: null,
     personlResidence: false,

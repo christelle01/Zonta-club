@@ -10,7 +10,7 @@ import {
   FormControl,
   InputLabel,
   Select,
-  MenuItem
+  Autocomplete
 } from "@mui/material";
 import { useSignUpFormContext } from "./Inscription";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -23,14 +23,16 @@ import { HOTELSNAME1 } from "../../dummydata";
 import { HOTELSNAME2 } from "../../dummydata";
 
 
+const HOTELSNAME_with_cat = HOTELSNAME.map((option) => ({...option, cat: 'Grand Hôtel'}));
+const HOTELSNAME1_with_cat = HOTELSNAME1.map((option) => ({...option, cat: 'Moyen Hôtel'}));
+const HOTELSNAME2_with_cat = HOTELSNAME2.map((option) => ({...option, cat: 'Petit Hôtel'}));
+
+const HOTELS = [...HOTELSNAME_with_cat, ...HOTELSNAME1_with_cat, ...HOTELSNAME2_with_cat];
+
+
 export default function HostingInfo({ handleNext, handlePrev }) {
   const { values, onChange } = useSignUpFormContext();
   const hostingInfo = values.hosting;
-
-  // états locaux pour les noms d'hôtels choisis pour chaque catégorie
-  const [grandHotelName, setGrandHotelName] = useState("Grand Hôtel");
-  const [moyenHotelName, setMoyenHotelName] = useState("Moyen Hôtel");
-  const [petitHotelName, setPetitHotelName] = useState("Petit Hôtel");
 
 
   return (
@@ -49,33 +51,26 @@ export default function HostingInfo({ handleNext, handlePrev }) {
 
           <Stack direction="row" spacing={3} width={1}>
             <Stack width={1}>
-              <FormControl variant="outlined">
-                <InputLabel id="noms">Choisir son hotel</InputLabel>
-                <Select
-                labelId="noms"
-                name="noms"
-                value={hostingInfo.hotelCategory}
-                onChange={(e) => {
-                  onChange("hosting.hotelCategory", e.target.value);
-                  // Mettre à jour les noms d'hôtels choisis en fonction de la catégorie
-                  const category = e.target.value;
-                  setGrandHotelName(HOTELSNAME[category].grandHotel);
-                  setMoyenHotelName(HOTELSNAME[category].moyenHotel);
-                  setPetitHotelName(HOTELSNAME[category].petitHotel);
-                }}
-                label="noms"
-                native
-                >
-                  <optgroup label={grandHotelName}>
-                  {HOTELSNAME.map((hot) => (<option key={hot.noms} value={hot.noms}>{hot.noms}</option>))}
-                  </optgroup>
-                  <optgroup label={moyenHotelName}>
-                  {HOTELSNAME1.map((hot) => (<option key={hot.noms} value={hot.noms}>{hot.noms}</option>))}
-                  </optgroup>
-                  <optgroup label={petitHotelName}>
-                  {HOTELSNAME2.map((hot) => (<option key={hot.noms} value={hot.noms}>{hot.noms}</option>))}
-                  </optgroup>
-                </Select>
+              <FormControl fullWidth required variant="outlined">
+                  <Autocomplete
+                   fullWidth
+                    id="noms"
+                    options={HOTELS}
+                    value={hostingInfo.hotel}
+                    groupBy={(option) => option.cat}
+                    getOptionLabel={(option) => option.noms}
+                    onChange={(e, val) => {
+                      onChange("hosting.hotel", val);                    
+                    }}
+                    renderInput={(params) => (
+                      <TextField
+                        {...params}
+                        name="noms"
+                        variant="outlined"
+                        required
+                      />
+                    )}
+                  />
               </FormControl>
             </Stack>
 
@@ -97,7 +92,10 @@ export default function HostingInfo({ handleNext, handlePrev }) {
                   label="Date d'entrée à l'hôtel"
                   variant="outlined"
                   value={hostingInfo.entryDate}
-                  onChange={(val) => onChange("hosting.entryDate", val)}
+                  onChange={(val) => {
+                    onChange("hosting.entryDate", val); 
+           
+                  }}
                   required
                 />
               </LocalizationProvider>

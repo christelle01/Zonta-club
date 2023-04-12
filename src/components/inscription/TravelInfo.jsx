@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Container,
   Paper,
@@ -24,9 +24,7 @@ export default function TravelInfo({ handleNext, handlePrev }) {
 
   const travelInfo = values.travel
 
-  const handleChange = (e) => {
-    onChange(`travel.${e.target.name}`, e.target.value);
-  };
+  
 
   return (
     <Container>
@@ -97,14 +95,19 @@ export default function TravelInfo({ handleNext, handlePrev }) {
                   labelId="title"
                   name="title"
                   value={travelInfo.entryPoint}
-                  onChange={handleChange}
+                  onChange={(event) => onChange("travel.entryPoint", event.target.value)}
                   label="Point d'entrée à Lomé"
                 >
-                  {ENTRYPOINT.map((ent) => (<MenuItem key={ent.title} value={ent.title}>{ent.title}</MenuItem>))}
+                  {ENTRYPOINT.map((ent) => (
+                    <MenuItem key={ent.title} value={ent.title}>
+                      {ent.title}
+                    </MenuItem>
+                  ))}
                 </Select>
               </FormControl>
             </Stack>
           </Stack>
+
 
           <Stack
             direction="row"
