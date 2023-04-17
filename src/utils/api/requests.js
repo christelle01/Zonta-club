@@ -15,7 +15,7 @@ export const saveForm = async ({ values, callback, onError }) => {
 export const checkUser = async ({ email, callback, onError }) => {
   try {
     const dbRef = collection(DB, "users");
-    const querySnap = query(dbRef, where("email", "==", email));
+    const querySnap = query(dbRef, where("personal.email", "==", email));
 
     const result = await getDocs(querySnap);
 

@@ -1,7 +1,29 @@
-import React from "react"
+import React, {useState} from "react"
 import "./footer.css"
+import { checkUser } from "../../../utils/api/requests"
 
 const Footer = () => {
+  const [mail, setMail] = useState(null)
+
+  const [loading, setLoading] = useState(false)
+
+  const [results, setResults] = useState(null);
+
+  const handleSearch = () => {
+    setLoading(true);
+    checkUser ({
+      email:mail, 
+      callback:(data) => {
+        setLoading(false);
+        setResults(data)
+      },
+      onError:() => {
+        setLoading(false);
+        setResults(null)
+      }
+    })
+  }
+  console.log(results)
   return (
     <>
       <section className='newletter'>
@@ -10,8 +32,8 @@ const Footer = () => {
             <h1>Vérification de votre inscription</h1>
           </div>
           <div className='right row'>
-            <input type='text' placeholder='Entrer votre adresse email' />
-            <i className='fa fa-paper-plane'></i>
+            <input onChange={(e) => setMail(e.currentTarget.value)} value={mail} type='text' placeholder='Entrer votre adresse email' />
+            <i onClick={handleSearch} className='fa fa-paper-plane'></i>
           </div>
         </div>
       </section>

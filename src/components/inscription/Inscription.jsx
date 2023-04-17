@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
-import { Alert, Stack } from "@mui/material";
+import { Alert, Stack, Snackbar, Button, IconButton } from "@mui/material";
+import CloseIcon from '@mui/icons-material/Close';
 import * as Yup from "yup";
 import TabButton from "../common/custom/tab/TabButton";
 import TabPanel from "../common/custom/tab/TabPanel";
@@ -85,6 +86,14 @@ export default function Inscription() {
   const [currentTab, setCurrentTab] = useState(0);
   const [saving, setSaving] = useState(false);
 
+  const [responseMessage, setResponseMessage] = useState({message:null, type:null});
+
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => setOpen(true);
+
+  const handleClose = () => setOpen(false);
+
   const formik = useFormik({
     initialValues: initialState,
     enableReinitialize: false,
@@ -95,10 +104,13 @@ export default function Inscription() {
         values: values,
         callback: (id) => {
           setSaving(false);
+          setResponseMessage({message:"Votre inscription a été enregistré", type:"success"});
+          handleOpen();
           console.log({ id });
         },
         onError: () => {
           setSaving(false);
+          setResponseMessage({message:"Votre inscription a échoué", type:"error"});
         },
       });
     },
@@ -202,6 +214,33 @@ export default function Inscription() {
             </Form>
           </FormikProvider>
         </Stack>
+        <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        open={open}
+        onClose={handleClose}
+      >
+        <Alert
+        severity={responseMessage.type}
+        autoHideDuration={6000}
+        action={
+          <React.Fragment>
+          <Button color="secondary" size="small" onClick={handleClose}>
+            UNDO
+          </Button>
+          <IconButton
+            size="small"
+            aria-label="close"
+            color="inherit"
+            onClick={handleClose}
+          >
+            <CloseIcon fontSize="small" />
+          </IconButton>
+        </React.Fragment>
+        }
+        >
+          {responseMessage.message}
+        </Alert>
+      </Snackbar>
       </Stack>
     </SignUpFormProvider.Provider>
   );
