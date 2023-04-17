@@ -1,208 +1,208 @@
 export const area = [
     {
-        value : 'Area 1',
+        value : 'Zone 1',
     },
 
     {
-        value : 'Area 2',
+        value : 'Zone 2',
     },
 
     {
-        value : 'Area 3',
+        value : 'Zone 3',
     },
     {
-        value : 'Area 4',
+        value : 'Zone 4',
     },
     {
-        value : 'Area 5',
-    },
-
-    {
-        value : 'Area 6',
+        value : 'Zone 5',
     },
 
     {
-        value : 'Area 7',
-    },
-    {
-        value : 'Area 8',
-    },
-    {
-        value : 'Area 9',
+        value : 'Zone 6',
     },
 
     {
-        value : 'Area 10',
+        value : 'Zone 7',
+    },
+    {
+        value : 'Zone 8',
+    },
+    {
+        value : 'Zone 9',
     },
 
     {
-        value : 'Area 11',
-    },
-    {
-        value : 'Area 12',
-    },
-    {
-        value : 'Area 13',
+        value : 'Zone 10',
     },
 
     {
-        value : 'Area 14',
+        value : 'Zone 11',
+    },
+    {
+        value : 'Zone 12',
+    },
+    {
+        value : 'Zone 13',
     },
 
     {
-        value : 'Area 15',
-    },
-    {
-        value : 'Area 16',
-    },
-    {
-        value : 'Area 17',
+        value : 'Zone 14',
     },
 
     {
-        value : 'Area 18',
+        value : 'Zone 15',
+    },
+    {
+        value : 'Zone 16',
+    },
+    {
+        value : 'Zone 17',
     },
 
     {
-        value : 'Area 19',
-    },
-    {
-        value : 'Area 20',
-    },
-    {
-        value : 'Area 21',
+        value : 'Zone 18',
     },
 
     {
-        value : 'Area 22',
+        value : 'Zone 19',
+    },
+    {
+        value : 'Zone 20',
+    },
+    {
+        value : 'Zone 21',
     },
 
     {
-        value : 'Area 23',
-    },
-    {
-        value : 'Area 24',
-    },
-    {
-        value : 'Area 25',
+        value : 'Zone 22',
     },
 
     {
-        value : 'Area 26',
+        value : 'Zone 23',
+    },
+    {
+        value : 'Zone 24',
+    },
+    {
+        value : 'Zone 25',
     },
 
     {
-        value : 'Area 27',
+        value : 'Zone 26',
+    },
+
+    {
+        value : 'Zone 27',
     },
     {
-        value : 'Area 28',
+        value : 'Zone 28',
     },{
-        value : 'Area 29',
+        value : 'Zone 29',
     },
 
     {
-        value : 'Area 30',
+        value : 'Zone 30',
     },
 
     {
-        value : 'Area 31',
+        value : 'Zone 31',
     },
     {
-        value : 'Area 32',
+        value : 'Zone 32',
     },
     {
-        value : 'Area 33',
-    },
-
-    {
-        value : 'Area 34',
+        value : 'Zone 33',
     },
 
     {
-        value : 'Area 35',
-    },
-    {
-        value : 'Area 36',
-    },
-    {
-        value : 'Area 37',
+        value : 'Zone 34',
     },
 
     {
-        value : 'Area 38',
+        value : 'Zone 35',
+    },
+    {
+        value : 'Zone 36',
+    },
+    {
+        value : 'Zone 37',
     },
 
     {
-        value : 'Area 39',
-    },
-    {
-        value : 'Area 40',
-    },
-    {
-        value : 'Area 41',
+        value : 'Zone 38',
     },
 
     {
-        value : 'Area 42',
+        value : 'Zone 39',
     },
     {
-        value : 'Area 43',
+        value : 'Zone 40',
     },
     {
-        value : 'Area 44',
-    },
-
-    {
-        value : 'Area 45',
+        value : 'Zone 41',
     },
 
     {
-        value : 'Area 46',
+        value : 'Zone 42',
     },
     {
-        value : 'Area 47',
+        value : 'Zone 43',
     },
     {
-        value : 'Area 48',
-    }, 
+        value : 'Zone 44',
+    },
+
     {
-        value : 'Area 49',
-    }, 
+        value : 'Zone 45',
+    },
+
     {
-        value : 'Area 50',
-    }, 
-    {
-        value : 'Area 51',
-    }, 
-    {
-        value : 'Area 52',
-    }, 
-    {
-        value : 'Area 53',
-    }, 
-    {
-        value : 'Area 54',
-    }, 
-    {
-        value : 'Area 55',
-    }, 
-    {
-        value : 'Area 56',
-    }, 
-    {
-        value : 'Area 57',
+        value : 'Zone 46',
     },
     {
-        value : 'Area 58',
+        value : 'Zone 47',
     },
     {
-        value : 'Area 59',
+        value : 'Zone 48',
+    }, 
+    {
+        value : 'Zone 49',
+    }, 
+    {
+        value : 'Zone 50',
+    }, 
+    {
+        value : 'Zone 51',
+    }, 
+    {
+        value : 'Zone 52',
+    }, 
+    {
+        value : 'Zone 53',
+    }, 
+    {
+        value : 'Zone 54',
+    }, 
+    {
+        value : 'Zone 55',
+    }, 
+    {
+        value : 'Zone 56',
+    }, 
+    {
+        value : 'Zone 57',
     },
     {
-        value : 'Area 60',
+        value : 'Zone 58',
     },
     {
-        value : 'Guest/Other',
+        value : 'Zone 59',
+    },
+    {
+        value : 'Zone 60',
+    },
+    {
+        value : 'Invité/Autres',
     },
     
 ]

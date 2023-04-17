@@ -3,7 +3,10 @@ import {
   Container,
   Paper,
   Stack,
-  TextField,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
   Button,
   Checkbox,
   FormControlLabel,
@@ -14,14 +17,12 @@ import { frFR } from "@mui/x-date-pickers/locales";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
+import { ENTRYPOINT } from "../../dummydata";
+
 export default function TravelInfo({ handleNext, handlePrev }) {
   const { values, onChange } = useSignUpFormContext();
 
   const travelInfo = values.travel;
-
-  const handleChange = (e) => {
-    onChange(`travel.${e.target.name}`, e.target.value);
-  };
 
   return (
     <Container>
@@ -84,15 +85,26 @@ export default function TravelInfo({ handleNext, handlePrev }) {
 
           <Stack direction="row" spacing={3} width={1}>
             <Stack width={1}>
-              <TextField
-                fullWidth
-                name="entryPoint"
-                label="Point d'entrée à Lomé"
-                variant="outlined"
-                value={travelInfo.entryPoint}
-                onChange={handleChange}
-                required
-              />
+              <FormControl fullWidth variant="outlined" required>
+                <InputLabel id="title">Point d'entrée à Lomé</InputLabel>
+                <Select
+                  fullWidth
+                  variant="outlined"
+                  labelId="title"
+                  name="title"
+                  value={travelInfo.entryPoint}
+                  onChange={(event) =>
+                    onChange("travel.entryPoint", event.target.value)
+                  }
+                  label="Point d'entrée à Lomé"
+                >
+                  {ENTRYPOINT.map((ent) => (
+                    <MenuItem key={ent.title} value={ent.title}>
+                      {ent.title}
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
             </Stack>
           </Stack>
 

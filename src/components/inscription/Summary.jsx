@@ -44,11 +44,19 @@ export default function TravelInfo({ handlePrev }) {
             <Typography variant="h5">Information de voyage </Typography>
             <LineText
               title="DATE D'ARRIVÉE À LOMÉ"
-              value={values.travel.arrivalDate}
+              value={
+                values.travel.arrivalDate
+                  ? new Date(values.travel.arrivalDate).toLocaleDateString()
+                  : ""
+              }
             />
             <LineText
               title="DATE DE RETOUR DE LOMÉ"
-              value={values.travel.returnDate}
+              value={
+                values.travel.returnDate
+                  ? new Date(values.travel.returnDate).toLocaleDateString()
+                  : ""
+              }
             />
             <LineText
               title="POINT D'ENTRÉE À LOMÉ"
@@ -58,14 +66,22 @@ export default function TravelInfo({ handlePrev }) {
 
           <Stack>
             <Typography variant="h5">Information d'hebergement </Typography>
-            <LineText title="HOTELS" value={values.hosting.hotelName} />
+            <LineText title="HOTELS" value={values.hosting.hotel.noms} />
             <LineText
               title="DATE D'ENTRÉE À L'HOTEL"
-              value={values.hosting.entryDate}
+              value={
+                values.hosting.entryDate
+                  ? new Date(values.hosting.entryDate).toLocaleDateString()
+                  : ""
+              }
             />
             <LineText
               title="DATE DE SORTIE DE L'HOTEL"
-              value={values.hosting.checkOut}
+              value={
+                values.hosting.checkOut
+                  ? new Date(values.hosting.checkOut).toLocaleDateString()
+                  : ""
+              }
             />
           </Stack>
         </Stack>

@@ -1,69 +1,69 @@
 export const posts = [
     {
-        value : 'District Director',
+        value : 'Directeur de district',
     },
 
     {
-        value : 'District Program Quality Director',
+        value : 'Directeur de la qualité des programmes de district',
     },
 
     {
-        value : 'District Club Growth Director',
+        value : 'Directeur de la croissance des clubs de district',
     },
     {
-        value : 'District Public Relationship Manager',
+        value : 'Responsable régional des relations publiques',
     },
     {
-        value : 'District Finance Manager',
-    },
-
-    {
-        value : 'District Admin Manager',
+        value : 'Gestionnaire des finances de district',
     },
 
     {
-        value : 'District Logistics Manager',
-    },
-    {
-        value : 'District Parlementarian',
-    },
-    {
-        value : 'Division Director',
+        value : 'Responsable Administratif de District',
     },
 
     {
-        value : 'Area Director',
+        value : 'Responsable Régional Logistique',
+    },
+    {
+        value : 'Parlementaire de district',
+    },
+    {
+        value : 'Directeur de division',
     },
 
     {
-        value : 'Club President',
-    },
-    {
-        value : 'VP Education',
-    },
-    {
-        value : 'VP Membership ',
+        value : 'Directeur de zone',
     },
 
     {
-        value : 'VP Public Relation',
+        value : 'Président de club',
+    },
+    {
+        value : "Vice-président à l'éducation",
+    },
+    {
+        value : 'Vice-président Adhésion',
     },
 
     {
-        value : 'Treasurer',
-    },
-    {
-        value : 'Secretary',
-    },
-    {
-        value : 'Sergeant-at-arm',
+        value : 'VP Relations Publiques',
     },
 
     {
-        value : 'Member',
+        value : 'Trésorier/Trésorière',
+    },
+    {
+        value : 'Secrétaire',
+    },
+    {
+        value : "Sergent d'armes",
     },
 
     {
-        value : 'Guest/Other',
+        value : 'Membre',
+    },
+
+    {
+        value : 'Invité/Autres',
     },
 ]

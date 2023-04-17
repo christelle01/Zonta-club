@@ -7,6 +7,8 @@ import {
   Button,
   Checkbox,
   FormControlLabel,
+  FormControl,
+  Autocomplete,
 } from "@mui/material";
 import { useSignUpFormContext } from "./Inscription";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -14,13 +16,32 @@ import { frFR } from "@mui/x-date-pickers/locales";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
+import { HOTELSNAME } from "../../dummydata";
+import { HOTELSNAME1 } from "../../dummydata";
+import { HOTELSNAME2 } from "../../dummydata";
+
+const HOTELSNAME_with_cat = HOTELSNAME.map((option) => ({
+  ...option,
+  cat: "Grand Hôtel",
+}));
+const HOTELSNAME1_with_cat = HOTELSNAME1.map((option) => ({
+  ...option,
+  cat: "Moyen Hôtel",
+}));
+const HOTELSNAME2_with_cat = HOTELSNAME2.map((option) => ({
+  ...option,
+  cat: "Petit Hôtel",
+}));
+
+const HOTELS = [
+  ...HOTELSNAME_with_cat,
+  ...HOTELSNAME1_with_cat,
+  ...HOTELSNAME2_with_cat,
+];
+
 export default function HostingInfo({ handleNext, handlePrev }) {
   const { values, onChange } = useSignUpFormContext();
   const hostingInfo = values.hosting;
-
-  const handleChange = (e) => {
-    onChange(`hosting.${e.target.name}`, e.target.value);
-  };
 
   return (
     <Container>
@@ -38,15 +59,27 @@ export default function HostingInfo({ handleNext, handlePrev }) {
 
           <Stack direction="row" spacing={3} width={1}>
             <Stack width={1}>
-              <TextField
-                fullWidth
-                name="hotelName"
-                label="Choisir son hotel"
-                variant="outlined"
-                value={hostingInfo.hotelName}
-                onChange={handleChange}
-                required
-              />
+              <FormControl fullWidth required variant="outlined">
+                <Autocomplete
+                  fullWidth
+                  id="noms"
+                  options={HOTELS}
+                  value={hostingInfo.hotel}
+                  groupBy={(option) => option.cat}
+                  getOptionLabel={(option) => option.noms}
+                  onChange={(e, val) => {
+                    onChange("hosting.hotel", val);
+                  }}
+                  renderInput={(params) => (
+                    <TextField
+                      {...params}
+                      name="noms"
+                      variant="outlined"
+                      required
+                    />
+                  )}
+                />
+              </FormControl>
             </Stack>
           </Stack>
 
@@ -66,7 +99,9 @@ export default function HostingInfo({ handleNext, handlePrev }) {
                   label="Date d'entrée à l'hôtel"
                   variant="outlined"
                   value={hostingInfo.entryDate}
-                  onChange={(val) => onChange("hosting.entryDate", val)}
+                  onChange={(val) => {
+                    onChange("hosting.entryDate", val);
+                  }}
                   required
                 />
               </LocalizationProvider>
