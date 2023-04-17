@@ -53,7 +53,6 @@ class CountdownTimer extends React.Component {
         >
           <Stack
             width={1}
-            container
             direction="row"
             justifyContent="center"
             alignItems="center"
