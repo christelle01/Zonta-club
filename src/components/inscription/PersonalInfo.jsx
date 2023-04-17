@@ -16,7 +16,7 @@ import { area } from "../../area";
 import { divisions } from "../../divisions";
 
 export default function PersonalInfo({ handleNext }) {
-  const { values, onChange } = useSignUpFormContext();
+  const { values, onChange, touched, errors } = useSignUpFormContext();
   const personalInfo = values.personal;
 
   const handleChange = (e) => {
@@ -33,8 +33,6 @@ export default function PersonalInfo({ handleNext }) {
     (option) => option.value === personalInfo.division
   );
 
-  console.log(personalInfo);
-
   return (
     <Container>
       <Paper elevation={0} sx={{ p: 3 }}>
@@ -49,6 +47,10 @@ export default function PersonalInfo({ handleNext }) {
                 value={personalInfo.prenom}
                 onChange={handleChange}
                 required
+                error={Boolean(
+                  errors?.personal?.prenom && touched?.personal?.prenom
+                )}
+                helperText={errors?.personal?.prenom}
               />
             </Stack>
             <Stack width={1}>
@@ -60,6 +62,8 @@ export default function PersonalInfo({ handleNext }) {
                 value={personalInfo.nom}
                 onChange={handleChange}
                 required
+                error={Boolean(errors?.personal?.nom && touched?.personal?.nom)}
+                helperText={errors?.personal?.nom}
               />
             </Stack>
           </Stack>
@@ -82,6 +86,10 @@ export default function PersonalInfo({ handleNext }) {
                       name="pays"
                       variant="outlined"
                       required
+                      error={Boolean(
+                        errors?.personal?.pays && touched?.personal?.pays
+                      )}
+                      helperText={errors?.personal?.pays}
                     />
                   )}
                 />
@@ -96,6 +104,10 @@ export default function PersonalInfo({ handleNext }) {
                 value={personalInfo.telephone}
                 onChange={handleChange}
                 required
+                error={Boolean(
+                  errors?.personal?.telephone && touched?.personal?.telephone
+                )}
+                helperText={errors?.personal?.telephone}
               />
             </Stack>
           </Stack>
@@ -110,6 +122,10 @@ export default function PersonalInfo({ handleNext }) {
                 value={personalInfo.email}
                 onChange={handleChange}
                 required
+                error={Boolean(
+                  errors?.personal?.email && touched?.personal?.email
+                )}
+                helperText={errors?.personal?.email}
               />
             </Stack>
             <Stack width={1}>
@@ -131,6 +147,10 @@ export default function PersonalInfo({ handleNext }) {
                       name="poste"
                       variant="outlined"
                       required
+                      error={Boolean(
+                        errors?.personal?.poste && touched?.personal?.poste
+                      )}
+                      helperText={errors?.personal?.poste}
                     />
                   )}
                 />
@@ -158,6 +178,10 @@ export default function PersonalInfo({ handleNext }) {
                       name="zone"
                       variant="outlined"
                       required
+                      error={Boolean(
+                        errors?.personal?.zone && touched?.personal?.zone
+                      )}
+                      helperText={errors?.personal?.zone}
                     />
                   )}
                 />
@@ -182,6 +206,11 @@ export default function PersonalInfo({ handleNext }) {
                       name="division"
                       variant="outlined"
                       required
+                      error={Boolean(
+                        errors?.personal?.division &&
+                          touched?.personal?.division
+                      )}
+                      helperText={errors?.personal?.division}
                     />
                   )}
                 />
@@ -200,6 +229,10 @@ export default function PersonalInfo({ handleNext }) {
               value={personalInfo.disposition}
               onChange={handleChange}
               required
+              error={Boolean(
+                errors?.personal?.disposition && touched?.personal?.disposition
+              )}
+              helperText={errors?.personal?.disposition}
             />
           </Stack>
 

@@ -8,10 +8,11 @@ import {
   Divider,
 } from "@mui/material";
 import { useSignUpFormContext } from "./Inscription";
+import { LoadingButton } from "@mui/lab";
 
 export default function TravelInfo({ handlePrev }) {
-  const { values } = useSignUpFormContext();
-  console.log({ values });
+  const { values, saving } = useSignUpFormContext();
+
   return (
     <Container>
       <Paper elevation={0} sx={{ p: 3 }}>
@@ -100,9 +101,9 @@ export default function TravelInfo({ handlePrev }) {
           </Stack>
 
           <Stack width={200}>
-            <Button type="submit" variant="contained">
+            <LoadingButton loading={saving} type="submit" variant="contained">
               Valider
-            </Button>
+            </LoadingButton>
           </Stack>
         </Stack>
       </Paper>
