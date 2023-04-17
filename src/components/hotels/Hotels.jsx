@@ -42,7 +42,7 @@ export default function AccessibleTable() {
                       <TableCell align="left" style={tableCellStyle}>{row.number}</TableCell>
                       <TableCell align="left" style={tableCellStyle}>{row.type}</TableCell>
                       <TableCell align="left" style={tableCellStyle}>{row.price}</TableCell>
-                      <TableCell align="left" style={tableCellStyle}><a href={row.link} target='_blank'>{row.link}</a></TableCell>
+                      <TableCell align="left" style={tableCellStyle}><a href={row.link} target='_blank' rel="noopener noreferrer">{row.link}</a></TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
