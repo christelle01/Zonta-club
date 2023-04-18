@@ -10,6 +10,7 @@ import HostingInfo from "./HostingInfo";
 import Summary from "./Summary";
 import { Form, FormikProvider, useFormik } from "formik";
 import { saveForm } from "../../utils/api/requests";
+import { COUNT_EXIST } from "../../constant/constants";
 
 const initialState = {
   personal: {
@@ -102,11 +103,13 @@ export default function Inscription() {
       setSaving(true);
       saveForm({
         values: values,
-        callback: (id) => {
+        callback: (result) => {
           setSaving(false);
           setResponseMessage({message:"Votre inscription a été enregistré", type:"success"});
+          if(result === COUNT_EXIST){
+              setResponseMessage({message: "Un compte associé à cet email déjà", type: 'info'})
+          }
           handleOpen();
-          console.log({ id });
         },
         onError: () => {
           setSaving(false);

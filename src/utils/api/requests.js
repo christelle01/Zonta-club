@@ -1,9 +1,18 @@
 import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { DB } from "../../contexts/FirebaseContext";
+import { COUNT_EXIST } from "../../constant/constants";
 
 export const saveForm = async ({ values, callback, onError }) => {
   try {
     const dbRef = collection(DB, "users");
+
+    const querySnap = query(dbRef, where("personal.email", "==", values?.personal?.email || ''));
+    const result = await getDocs(querySnap);
+
+    if (!result.empty) {
+      return callback(COUNT_EXIST)
+    }
+
     const add = await addDoc(dbRef, values);
     if (callback) callback(add.id);
   } catch (error) {

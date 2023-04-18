@@ -10,13 +10,42 @@ import {
 import { useSignUpFormContext } from "./Inscription";
 import { LoadingButton } from "@mui/lab";
 
-export default function TravelInfo({ handlePrev }) {
+export default function Summary({ handlePrev }) {
   const { values, saving } = useSignUpFormContext();
 
   return (
     <Container>
       <Paper elevation={0} sx={{ p: 3 }}>
-        <Stack spacing={2}>
+        <SummaryContainer values={values} />
+        <Stack
+          mt={3}
+          direction="row"
+          width={1}
+          justifyContent="flex-end"
+          spacing={2}
+        >
+          <Stack width={200}>
+            <Button onClick={handlePrev} variant="outlined">
+              précédent
+            </Button>
+          </Stack>
+
+          <Stack width={200}>
+            <LoadingButton loading={saving} type="submit" variant="contained">
+              Valider
+            </LoadingButton>
+          </Stack>
+        </Stack>
+
+      </Paper>
+    </Container>
+  );
+}
+
+export const SummaryContainer = ({values}) => {
+
+  return (
+      <Stack spacing={2}>
           <Stack>
             <Typography variant="h5">Information personnelle </Typography>
             <LineText title="NOM" value={values.personal.nom} required />
@@ -87,27 +116,6 @@ export default function TravelInfo({ handlePrev }) {
           </Stack>
         </Stack>
 
-        <Stack
-          mt={3}
-          direction="row"
-          width={1}
-          justifyContent="flex-end"
-          spacing={2}
-        >
-          <Stack width={200}>
-            <Button onClick={handlePrev} variant="outlined">
-              précédent
-            </Button>
-          </Stack>
-
-          <Stack width={200}>
-            <LoadingButton loading={saving} type="submit" variant="contained">
-              Valider
-            </LoadingButton>
-          </Stack>
-        </Stack>
-      </Paper>
-    </Container>
   );
 }
 

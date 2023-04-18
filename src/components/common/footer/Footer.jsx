@@ -1,25 +1,31 @@
 import React, {useState} from "react"
+import { CircularProgress, Stack, InputBase, IconButton } from "@mui/material"
+import SendIcon from '@mui/icons-material/Send';
 import "./footer.css"
 import { checkUser } from "../../../utils/api/requests"
+import UserConfirmation from "./UserConfirmation"
 
 const Footer = () => {
   const [mail, setMail] = useState(null)
-
   const [loading, setLoading] = useState(false)
-
   const [results, setResults] = useState(null);
+  const [open, setOpen] = useState(false);
+
+  const handleOpen = () => setOpen(true)
+  const handleClose = () => setOpen(false)
 
   const handleSearch = () => {
     setLoading(true);
     checkUser ({
       email:mail, 
-      callback:(data) => {
+      callback:(data = []) => {
         setLoading(false);
-        setResults(data)
+        setResults(data);
+        handleOpen();
       },
       onError:() => {
         setLoading(false);
-        setResults(null)
+        setResults(null);
       }
     })
   }
@@ -32,8 +38,23 @@ const Footer = () => {
             <h1>Vérification de votre inscription</h1>
           </div>
           <div className='right row'>
-            <input onChange={(e) => setMail(e.currentTarget.value)} value={mail} type='text' placeholder='Entrer votre adresse email' />
-            <i onClick={handleSearch} className='fa fa-paper-plane'></i>
+            <Stack width={1} direction='row' alignItems='center' borderRadius={2}  sx={{ bgcolor: 'white', height: 50}}>
+            <InputBase 
+             size="small"
+              fullWidth 
+              onChange={(e) => setMail(e.currentTarget.value)} 
+              value={mail} 
+              type='text' 
+              placeholder='Entrer votre adresse email' 
+             
+            />
+            <Stack px={1}>
+              {loading ? 
+                <CircularProgress size={20} /> : 
+                <IconButton color='info' onClick={handleSearch}> <SendIcon /> </IconButton>
+                }
+            </Stack>
+            </Stack>
           </div>
         </div>
       </section>
@@ -53,6 +74,7 @@ const Footer = () => {
           Copyright ©2023 Tous droits réservés | Développé par <a href="https://okydook.com">OKYDOOK</a>
         </p>
       </div>
+      <UserConfirmation open={open} onClose={handleClose} data={results} />
     </>
   )
 }

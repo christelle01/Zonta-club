@@ -1,0 +1,1 @@
+export const COUNT_EXIST = 'count_exist';
