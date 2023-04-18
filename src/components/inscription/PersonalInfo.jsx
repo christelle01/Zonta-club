@@ -6,7 +6,6 @@ import {
   TextField,
   Button,
   FormControl,
-  Typography,
   Autocomplete,
 } from "@mui/material";
 import { useSignUpFormContext } from "./Inscription";
@@ -236,12 +235,12 @@ export default function PersonalInfo({ handleNext }) {
             />
           </Stack>
 
-          <Stack>
+          {/* <Stack>
             <Typography>
               Après inscription vous serez redirigé vers la page de paiement
               pour valider votre inscription.
             </Typography>
-          </Stack>
+          </Stack> */}
 
           <Stack direction="row" width={1} justifyContent="flex-end">
             <Stack width={300}>

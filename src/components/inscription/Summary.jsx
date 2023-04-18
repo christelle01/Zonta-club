@@ -26,7 +26,7 @@ export default function Summary({ handlePrev }) {
         >
           <Stack width={200}>
             <Button onClick={handlePrev} variant="outlined">
-              précédent
+              Précédent
             </Button>
           </Stack>
 
@@ -46,6 +46,9 @@ export const SummaryContainer = ({values}) => {
 
   return (
       <Stack spacing={2}>
+        <Stack>
+          <Typography color="primary">Vous êtes bien inscris ! Voici vos informations d'inscription : </Typography>
+        </Stack>
           <Stack>
             <Typography variant="h5">Information personnelle </Typography>
             <LineText title="NOM" value={values.personal.nom} required />

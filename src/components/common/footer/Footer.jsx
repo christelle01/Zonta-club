@@ -6,7 +6,7 @@ import { checkUser } from "../../../utils/api/requests"
 import UserConfirmation from "./UserConfirmation"
 
 const Footer = () => {
-  const [mail, setMail] = useState(null)
+  const [mail, setMail] = useState('')
   const [loading, setLoading] = useState(false)
   const [results, setResults] = useState(null);
   const [open, setOpen] = useState(false);

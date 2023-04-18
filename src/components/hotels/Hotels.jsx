@@ -1,5 +1,6 @@
 import * as React from "react";
 import {
+  Box, 
   Table,
   TableBody,
   TableCell,
@@ -53,8 +54,8 @@ export default function AccessibleTable() {
                   </TableRow>
                 </TableHead>
                 <TableBody>
-                  {rows.map((row) => (
-                    <TableRow key={row.name}>
+                  {rows.map((row, index) => (
+                    <TableRow key={row.name+index}>
                       <TableCell
                         component="th"
                         scope="row"
@@ -65,15 +66,22 @@ export default function AccessibleTable() {
                       <TableCell align="left" style={tableCellStyle}>
                         {row.name}
                       </TableCell>
-                      <TableCell align="left" style={tableCellStyle}>
+                      <TableCell align="center" style={tableCellStyle} sx={{ width: 100}}>
                         {row.number}
                       </TableCell>
-                      <TableCell align="left" style={tableCellStyle}>
-                        {row.type}
+
+                      <TableCell style={tableCellStyle} sx={{p:0,  width: 200}} >
+                        {row.rooms.map((room, index) => (
+                          <Box key={room.type+index} sx={{ borderBottom: (index === 0 && row.rooms.length > 1) ? `1px solid #0000001a`: 'none',  }}>  <TableCell align="left" >{room.type}</TableCell> </Box>
+                        ))}
                       </TableCell>
-                      <TableCell align="left" style={tableCellStyle}>
-                        {row.price}
+
+                      <TableCell style={tableCellStyle} sx={{p:0}} >
+                          {row.rooms.map((room, index) => (
+                            <Box width={1} key={room.price+index}  sx={{ borderBottom: (index === 0 && row.rooms.length > 1) ? `1px solid #0000001a`: 'none'  }}>  <TableCell  sx={{p: 0, py: 2 }}>{room.price}</TableCell></Box>
+                          ))} 
                       </TableCell>
+
                       <TableCell align="left" style={tableCellStyle}>
                         <a
                           href={row.link}

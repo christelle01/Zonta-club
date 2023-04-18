@@ -4,7 +4,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { SummaryContainer } from "../../inscription/Summary";
 
 export default function UserConfirmation({open, onClose, data }) {
-    console.log({data});
+   
   return (
     <Dialog maxWidth='md' fullWidth open={open} onClose={onClose}>
         <DialogTitle>
