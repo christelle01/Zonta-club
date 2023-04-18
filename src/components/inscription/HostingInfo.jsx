@@ -139,7 +139,7 @@ export default function HostingInfo({ handleNext, handlePrev }) {
           >
             <Stack width={200}>
               <Button onClick={handlePrev} variant="outlined">
-                précédent
+                Précédent
               </Button>
             </Stack>
 

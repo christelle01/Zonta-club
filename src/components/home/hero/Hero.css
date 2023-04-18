@@ -9,6 +9,9 @@
   color: #fff;
 }
 
+button {
+  border-radius: 25px;
+}
 
 .hero #heading h3 {
   color: #fff;

@@ -25,6 +25,38 @@ export const PHOTOS = [
     title : "Le patio: Restaurant et maison d'hôtes",
     image : "https://toastmastersinscriptions.online/images/1672835521.jpeg",
   },
+  {
+    title : "Le farniente sur une plage de Lomé",
+    image : "/images/gallery/plagelome.jpeg",
+  },
+  {
+    title : "Alt Muchen Restaurant",
+    image : "/images/gallery/AltMuchenRestaurant.jpeg",
+  },
+  {
+    title : "Harmony Signature",
+    image : "/images/gallery/HarmonySignature.jpeg",
+  },
+  {
+    title : "Le patio hotel - restaurant",
+    image : "/images/gallery/LePatioHotelRestaurant.jpeg",
+  },
+  {
+    title : "Le patio Restaurant",
+    image : "/images/gallery/LePatioRestaurant.jpeg",
+  },
+  {
+    title : "Le patio suite junior",
+    image : "/images/gallery/LePatioSuiteJunior.jpeg",
+  },
+  {
+    title : "Plage Lomé",
+    image : "/images/gallery/PlageLome.jpeg",
+  },
+  {
+    title : "Pure plage",
+    image : "/images/gallery/pureplaisir.jpeg",
+  },
 ]
 
 

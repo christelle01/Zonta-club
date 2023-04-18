@@ -1,7 +1,7 @@
 import React from "react";
 import Heading from "../../common/heading/Heading";
 import "./Hero.css";
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
@@ -21,12 +21,14 @@ const Hero = () => {
         pl={{ xs: 2, md: 10 }}
       >
         <Heading subtitle="" title="CONFÉRENCE DISTRICT 18" />
-        <p>
-          Le Togo a l'honneur d'accueillir tous les membres du club Zonta du
-          monde entier du 19 au 22 Octobre 2023, pour la conférence du District
-          18. Pour vous enregistrer et participer à cet évènement, nous vous
-          invitons cordialement à cliquer sur le lien ci-dessous.
-        </p>
+        <Typography gutterBottom>
+        Le Togo a le privilège d'accueillir la conférence du District 18 du club Zonta, qui
+réunira les membres du Club Zonta du monde entier, du 19 au 22 octobre 2023
+        </Typography>
+        <Typography>
+        Afin de vous enregistrer à cette rencontre d'envergure, nous vous invitons à cliquer
+sur "s’inscrire ".
+        </Typography>
 
         <Stack direction="row">
           <button className="primary-btn" onClick={handleNavigation}>

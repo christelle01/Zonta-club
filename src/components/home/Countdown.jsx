@@ -8,7 +8,7 @@ class CountdownTimer extends React.Component {
 
     // Définir la date de fin du compte à rebours
     this.state = {
-      endDate: new Date("2023-05-20T00:00:00Z"),
+      endDate: new Date("2023-10-19T00:00:00Z"),
     };
   }
 
@@ -46,7 +46,7 @@ class CountdownTimer extends React.Component {
           sx={{
             bgcolor: "#802528",
             width: "60%",
-            borderRadius: 1,
+            borderRadius: 3,
             py: 5,
             color: "white",
           }}

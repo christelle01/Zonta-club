@@ -25,7 +25,9 @@ export default function Types() {
       <Typography variant="h2" color={"#802528"} gutterBottom>Programme des évènements</Typography>
     
       <Typography variant="subtitle1" gutterBottom>
-        Au programme, Conférences-ateliers ; Concours de discours; Temple de la renommée; Élection des Officiers du District 94 pour le prochain mandat ; Dîner de gala et networking, tout a été concocté pour vous faire vivre une merveilleuse expérience, dans la belle ville de Lomé.      
+      Le programme inclut des conférences-ateliers, un dîner de gala et du
+networking. Tout a été planifié pour offrir une expérience merveilleuse dans la belle ville de
+Lomé.      
       </Typography>
       
       <Stack width={1} direction="row" justifyContent={'center'} spacing={4} py={5}>
