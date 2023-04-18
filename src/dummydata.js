@@ -61,7 +61,7 @@ export const PHOTOS = [
 
 
 
-export const rows = [
+export const rowBigHotel = [
   {
     na: "1",
     name: "Hôtel 2 Février ( même endroit que le centre de conférence)",
@@ -83,7 +83,6 @@ export const rows = [
     rooms:[{type: "Standard (double)", price: "49.510"}, { type:"Standard + (double)", price: "57.122" }],
     link: "https://www.booking.com/hotel/tg/onomo-lome.fr.html",
   },
-
   {
     na: "4",
     name: "	Hôtel ANHUI (2,7 km du centre de conférence soit 7 min en voiture)",
@@ -91,7 +90,6 @@ export const rows = [
     rooms:[{type: "Standard (double)", price: "41.000"}, { type:"Standard + (double)", price: "47.000" }],
     link: "https://www.booking.com/hotel/tg/anhui.fr.html",
   },
- 
   {
     na: "5",
     name: "Hôtel Pélican (6,8 km du centre de conférence soit 13 min en voiture)",
@@ -106,7 +104,6 @@ export const rows = [
     rooms: [{type: "Standard (double)", price: "70.000"}],
     link: "https://www.booking.com/hotel/tg/du-golfe.fr.html",
   },
-
   {
     na: "7",
     name: "Blue turtler (7,6 km du centre de conférence soit 16 min en voiture)",
@@ -122,6 +119,36 @@ export const rows = [
     link: "",
   },
 ];
+
+
+export const rowSmallHotel = [
+  {
+    na: "9",
+    name: "key Boutique Hôtel (2,4 km du centre de conférence soit 5 min en voiture)",
+    number: "8",
+    rooms: [{type: "Standard (double)", price: "45.000"}, {type: "Standard + (double)", price: "75.000"}],
+    link: "http://thekeyboutiquehotel.com/",
+  },
+  {
+    na: "10",
+    name: "Hôtel la pointe des antilles (4,5 km du centre de conférence soit 10 min en voiture)",
+    number: "12",
+    rooms: [{type: "Standard (double)", price: "31.000"}, { type: "Standard + (double)", price: "61.000"}],
+    link: "https://la-pointe-des-antilles-lome.hotelmix.fr/#r",
+  },
+];
+
+export const rowFurnished = [
+  {
+    na: "11",
+    name: "Hôtel SCI ROSALIE'S (4,1 km du centre de conférence soit 9 min en voiture)",
+    number: "12",
+    rooms: [{type: "Appartement de 1 Chambre", price: "40.000"}, { type: "Appartement de 1 Chambre", price: "75.000"}, { type: "Appartement de 2 Chambres", price: "115.000"},  { type: "Appartement de 2 Chambres", price: "150.000"}],
+    link: "https://www.booking.com/hotel/tg/rosalie-39-s-suites.fr.html",
+  },
+];
+
+
 
 export const PROGRAM = [
   {
