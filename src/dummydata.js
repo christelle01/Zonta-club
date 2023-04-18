@@ -27,7 +27,7 @@ export const PHOTOS = [
   },
   {
     title : "Le farniente sur une plage de Lomé",
-    image : "/images/gallery/plagelome.jpeg",
+    image : "/images/gallery/plageLome.jpeg",
   },
   {
     title : "Alt Muchen Restaurant",
