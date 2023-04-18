@@ -49,7 +49,7 @@ export const PHOTOS = [
   },
   {
     title: "Plage Lomé",
-    image: "/images/gallery/plagelome.jpeg",
+    image: "/images/gallery/pecheplage.jpeg",
   },
   {
     title: "Pure plage",
