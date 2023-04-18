@@ -1,5 +1,5 @@
 import React from 'react'
-import { Dialog, DialogTitle, DialogContent, DialogContentText, Stack, IconButton } from "@mui/material";
+import { Dialog, DialogTitle, DialogContent, DialogContentText, Stack, IconButton, Typography } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import { SummaryContainer } from "../../inscription/Summary";
 
@@ -8,7 +8,10 @@ export default function UserConfirmation({open, onClose, data }) {
   return (
     <Dialog maxWidth='md' fullWidth open={open} onClose={onClose}>
         <DialogTitle>
-        <Stack width={1} direction="row" justifyContent='flex-end'>
+        <Stack width={1} direction="row" justifyContent='space-between'>
+        <Stack>
+          <Typography color="primary" fontWeight={"bold"}>Vous êtes bien inscris ! Voici vos informations d'inscription : </Typography>
+        </Stack>
           <Stack>
             <IconButton
             size="small"
