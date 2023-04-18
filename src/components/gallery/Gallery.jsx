@@ -95,7 +95,7 @@ const Slider= ({ selectedImage, handleClose  }) =>{
                 )}
               </Stack>
               <Stack position="absolute" top={0} bottom={0} height={1} right={0} alignItems='center' justifyContent='center'>
-                  <IconButton onClick={handleNext}  disabled={selectedPosition === PHOTOS.length} >
+                  <IconButton onClick={handleNext}  disabled={selectedPosition === (PHOTOS.length -1)} >
                     <ArrowForwardIosIcon fontSize='large' sx={{ color:"white" }} />
                   </IconButton>
               </Stack>
