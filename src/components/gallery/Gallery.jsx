@@ -78,28 +78,28 @@ const Slider= ({ selectedImage, handleClose  }) =>{
 
 
   return (
-        <Dialog fullWidth maxWidth='md' open={Boolean(current)} onClose={handleClose}>
-            <Stack position="relative" sx={{ overflow: 'hidden', width: 1, height: 0.5}}>
-              <Stack position="absolute" top={0} bottom={0} height={1} alignItems='center' justifyContent='center'>
-                <IconButton onClick={handlePrev} disabled={selectedPosition === 0}>
-                  <ArrowBackIosIcon fontSize='large' sx={{ color:"white" }} />
-                </IconButton>
-              </Stack>
-              <Stack>
-                {current && (
-                  <img
-                    src={current.image}
-                    alt={current.title}
-                    style={{ maxWidth: "100%", maxHeight: "100%", overflow: "hidden" }}
-                  />
-                )}
-              </Stack>
-              <Stack position="absolute" top={0} bottom={0} height={1} right={0} alignItems='center' justifyContent='center'>
-                  <IconButton onClick={handleNext}  disabled={selectedPosition === (PHOTOS.length -1)} >
-                    <ArrowForwardIosIcon fontSize='large' sx={{ color:"white" }} />
-                  </IconButton>
-              </Stack>
+        <Dialog open={Boolean(current)} onClose={handleClose}>
+          <Stack position="relative" sx={{ overflow: 'hidden', width: 1, height: 0.5}}>
+            <Stack position="absolute" top={0} bottom={0} height={1} alignItems='center' justifyContent='center'>
+              <IconButton onClick={handlePrev} disabled={selectedPosition === 0}>
+                <ArrowBackIosIcon fontSize='large' sx={{ color:"white" }} />
+              </IconButton>
             </Stack>
-          </Dialog>
+            <Stack>
+              {current && (
+                <img
+                  src={current.image}
+                  alt={current.title}
+                  style={{ maxWidth: "100%", maxHeight: "100%", overflow: "hidden" }}
+                />
+              )}
+            </Stack>
+            <Stack position="absolute" top={0} bottom={0} height={1} right={0} alignItems='center' justifyContent='center'>
+                <IconButton onClick={handleNext}  disabled={selectedPosition === (PHOTOS.length -1)} >
+                  <ArrowForwardIosIcon fontSize='large' sx={{ color:"white" }} />
+                </IconButton>
+            </Stack>
+          </Stack>
+        </Dialog>
   );
 }
