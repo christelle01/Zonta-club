@@ -1,50 +1,67 @@
-[debug] [2023-04-18T14:49:26.127Z] ----------------------------------------------------------------------
-[debug] [2023-04-18T14:49:26.130Z] Command:       /home/nani/.nvm/versions/node/v16.19.1/bin/node /home/nani/.nvm/versions/node/v16.19.1/bin/firebase use zonta-a910d
-[debug] [2023-04-18T14:49:26.131Z] CLI Version:   11.25.1
-[debug] [2023-04-18T14:49:26.132Z] Platform:      linux
-[debug] [2023-04-18T14:49:26.132Z] Node Version:  v16.19.1
-[debug] [2023-04-18T14:49:26.132Z] Time:          Tue Apr 18 2023 14:49:26 GMT+0000 (heure moyenne de Greenwich)
-[debug] [2023-04-18T14:49:26.133Z] ----------------------------------------------------------------------
+[debug] [2023-04-20T17:06:32.414Z] ----------------------------------------------------------------------
+[debug] [2023-04-20T17:06:32.415Z] Command:       /home/nani/.nvm/versions/node/v16.19.1/bin/node /home/nani/.nvm/versions/node/v16.19.1/bin/firebase login
+[debug] [2023-04-20T17:06:32.416Z] CLI Version:   11.25.1
+[debug] [2023-04-20T17:06:32.416Z] Platform:      linux
+[debug] [2023-04-20T17:06:32.416Z] Node Version:  v16.19.1
+[debug] [2023-04-20T17:06:32.416Z] Time:          Thu Apr 20 2023 17:06:32 GMT+0000 (heure moyenne de Greenwich)
+[debug] [2023-04-20T17:06:32.416Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-04-18T14:49:26.137Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2023-04-18T14:49:26.364Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-04-18T14:49:26.364Z] > authorizing via signed-in user (christellecarmela@gmail.com)
-[debug] [2023-04-18T14:49:26.366Z] > refreshing access token with scopes: []
-[debug] [2023-04-18T14:49:26.368Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2023-04-18T14:49:26.368Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[warn] ⚠  Unable to fetch the CLI MOTD and remote config. 
-[debug] [2023-04-18T14:49:51.190Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json
-[debug] [2023-04-18T14:49:51.390Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2023-04-18T14:49:56.417Z] Error: Timed out.
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=942001793&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-04-20T17:07:07.486Z] >>> [apiv2][query] POST https://accounts.google.com/o/oauth2/token [none]
+[debug] [2023-04-20T17:07:07.487Z] >>> [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[debug] [2023-04-20T17:07:16.899Z] <<< [apiv2][status] POST https://accounts.google.com/o/oauth2/token 200
+[debug] [2023-04-20T17:07:16.899Z] <<< [apiv2][body] POST https://accounts.google.com/o/oauth2/token [omitted]
+[info] 
+[info] ✔  Success! Logged in as christellecarmela@gmail.com 
+[debug] [2023-04-20T17:07:26.948Z] Error: Timed out.
     at Timeout._onTimeout (/home/nani/.nvm/versions/node/v16.19.1/lib/node_modules/firebase-tools/lib/utils.js:253:49)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 [error] 
 [error] Error: An unexpected error has occurred.
-[debug] [2023-04-18T14:51:27.930Z] ----------------------------------------------------------------------
-[debug] [2023-04-18T14:51:27.932Z] Command:       /home/nani/.nvm/versions/node/v16.19.1/bin/node /home/nani/.nvm/versions/node/v16.19.1/bin/firebase use zonta-a910d
-[debug] [2023-04-18T14:51:27.933Z] CLI Version:   11.25.1
-[debug] [2023-04-18T14:51:27.933Z] Platform:      linux
-[debug] [2023-04-18T14:51:27.933Z] Node Version:  v16.19.1
-[debug] [2023-04-18T14:51:27.934Z] Time:          Tue Apr 18 2023 14:51:27 GMT+0000 (heure moyenne de Greenwich)
-[debug] [2023-04-18T14:51:27.934Z] ----------------------------------------------------------------------
+[debug] [2023-04-20T17:11:25.281Z] ----------------------------------------------------------------------
+[debug] [2023-04-20T17:11:25.282Z] Command:       /home/nani/.nvm/versions/node/v16.19.1/bin/node /home/nani/.nvm/versions/node/v16.19.1/bin/firebase use zonta-a910d
+[debug] [2023-04-20T17:11:25.282Z] CLI Version:   11.28.0
+[debug] [2023-04-20T17:11:25.282Z] Platform:      linux
+[debug] [2023-04-20T17:11:25.282Z] Node Version:  v16.19.1
+[debug] [2023-04-20T17:11:25.283Z] Time:          Thu Apr 20 2023 17:11:25 GMT+0000 (heure moyenne de Greenwich)
+[debug] [2023-04-20T17:11:25.283Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-04-18T14:51:27.939Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2023-04-18T14:51:28.077Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-04-18T14:51:28.078Z] > authorizing via signed-in user (christellecarmela@gmail.com)
-[debug] [2023-04-18T14:51:28.079Z] > refreshing access token with scopes: []
-[debug] [2023-04-18T14:51:28.081Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2023-04-18T14:51:28.081Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-04-18T14:51:28.509Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2023-04-18T14:51:28.510Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2023-04-18T14:51:28.529Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/zonta-a910d [none]
-[debug] [2023-04-18T14:51:48.375Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2023-04-18T14:51:48.377Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
-[debug] [2023-04-18T14:51:53.553Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/zonta-a910d
-[debug] [2023-04-18T14:51:58.569Z] Error: Timed out.
+[debug] [2023-04-20T17:11:25.351Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-20T17:11:25.352Z] > authorizing via signed-in user (christellecarmela@gmail.com)
+[debug] [2023-04-20T17:11:25.354Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/zonta-a910d [none]
+[debug] [2023-04-20T17:11:41.195Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/zonta-a910d 200
+[debug] [2023-04-20T17:11:41.196Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/zonta-a910d {"projectId":"zonta-a910d","projectNumber":"905443186570","displayName":"zonta","name":"projects/zonta-a910d","resources":{"hostingSite":"zonta-a910d"},"state":"ACTIVE","etag":"1_e2bc05aa-9480-4b3a-aef9-25618ea5b84c"}
+[info] Now using project zonta-a910d
+[debug] [2023-04-20T17:11:51.232Z] Error: Timed out.
     at Timeout._onTimeout (/home/nani/.nvm/versions/node/v16.19.1/lib/node_modules/firebase-tools/lib/utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-04-20T17:13:35.494Z] ----------------------------------------------------------------------
+[debug] [2023-04-20T17:13:35.496Z] Command:       /home/nani/.nvm/versions/node/v16.19.1/bin/node /home/nani/Documents/Zonta-club/node_modules/.bin/firebase use zonta-a910d
+[debug] [2023-04-20T17:13:35.496Z] CLI Version:   11.28.0
+[debug] [2023-04-20T17:13:35.496Z] Platform:      linux
+[debug] [2023-04-20T17:13:35.497Z] Node Version:  v16.19.1
+[debug] [2023-04-20T17:13:35.497Z] Time:          Thu Apr 20 2023 17:13:35 GMT+0000 (heure moyenne de Greenwich)
+[debug] [2023-04-20T17:13:35.497Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-20T17:13:35.568Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-20T17:13:35.569Z] > authorizing via signed-in user (christellecarmela@gmail.com)
+[debug] [2023-04-20T17:13:35.572Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/zonta-a910d [none]
+[debug] [2023-04-20T17:13:36.594Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/zonta-a910d 200
+[debug] [2023-04-20T17:13:36.596Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/zonta-a910d {"projectId":"zonta-a910d","projectNumber":"905443186570","displayName":"zonta","name":"projects/zonta-a910d","resources":{"hostingSite":"zonta-a910d"},"state":"ACTIVE","etag":"1_e2bc05aa-9480-4b3a-aef9-25618ea5b84c"}
+[info] Now using project zonta-a910d
+[debug] [2023-04-20T17:13:46.643Z] Error: Timed out.
+    at Timeout._onTimeout (/home/nani/Documents/Zonta-club/node_modules/firebase-tools/lib/utils.js:253:49)
     at listOnTimeout (node:internal/timers:559:17)
     at processTimers (node:internal/timers:502:7)
 [error] 
