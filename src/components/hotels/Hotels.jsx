@@ -49,10 +49,14 @@ export default function AccessibleTable() {
                       Prix ​​Conférence District 18 (Fcfa)
                     </TableCell>
                     <TableCell align="left" style={tableCellStyle}>
+                      Prix ​​Conférence District 18 (USD)
+                    </TableCell>
+                    <TableCell align="left" style={tableCellStyle}>
                       Lien site web ou booking.com
                     </TableCell>
                   </TableRow>
                 </TableHead>
+
                 <TableBody>
                   <TableRow>
                     <TableCell colSpan={6} align="center" sx={{fontWeight: 'bold', fontSize: 20}}>Grands hotels</TableCell>
@@ -84,6 +88,11 @@ export default function AccessibleTable() {
                             <Box width={1} key={room.price+index}  sx={{ borderBottom: (index === 0 && row.rooms.length > 1) ? `1px solid #0000001a`: 'none'  }}>  <TableCell  sx={{p: 0, py: 2 }}>{room.price}</TableCell></Box>
                           ))} 
                       </TableCell>
+                      <TableCell style={tableCellStyle} sx={{p:0}} >
+                          {row.dollars.map((dollar, index) => (
+                            <Box width={1} key={dollar.price+index}  sx={{ borderBottom: (index === 0 && row.dollars.length > 1) ? `1px solid #0000001a`: 'none'  }}>  <TableCell  sx={{p: 0, py: 2 }}>{dollar.price}</TableCell></Box>
+                          ))} 
+                      </TableCell>
 
                       <TableCell align="left" style={tableCellStyle}>
                         <a
@@ -96,6 +105,7 @@ export default function AccessibleTable() {
                       </TableCell>
                     </TableRow>
                   ))}
+
                   <TableRow>
                     <TableCell colSpan={6} align="center" sx={{fontWeight: 'bold', fontSize: 20}}>Petits hotels</TableCell>
                   </TableRow>
@@ -126,6 +136,11 @@ export default function AccessibleTable() {
                             <Box width={1} key={room.price+index}  sx={{ borderBottom: (index === 0 && row.rooms.length > 1) ? `1px solid #0000001a`: 'none'  }}>  <TableCell  sx={{p: 0, py: 2 }}>{room.price}</TableCell></Box>
                           ))} 
                       </TableCell>
+                      <TableCell style={tableCellStyle} sx={{p:0}} >
+                          {row.dollars.map((dollar, index) => (
+                            <Box width={1} key={dollar.price+index}  sx={{ borderBottom: (index === 0 && row.dollars.length > 1) ? `1px solid #0000001a`: 'none'  }}>  <TableCell  sx={{p: 0, py: 2 }}>{dollar.price}</TableCell></Box>
+                          ))} 
+                      </TableCell>
 
                       <TableCell align="left" style={tableCellStyle}>
                         <a
@@ -138,6 +153,7 @@ export default function AccessibleTable() {
                       </TableCell>
                     </TableRow>
                   ))}
+
                   <TableRow>
                     <TableCell colSpan={6} align="center" sx={{fontWeight: 'bold', fontSize: 20}}> Appartements meublés </TableCell>
                   </TableRow>
@@ -166,6 +182,11 @@ export default function AccessibleTable() {
                       <TableCell style={tableCellStyle} sx={{p:0}} >
                           {row.rooms.map((room, index) => (
                             <Box width={1} key={room.price+index}  sx={{ borderBottom: (index === 1 || row.rooms.length > 2) ? `1px solid #0000001a`: 'none'  }}>  <TableCell  sx={{p: 0, py: 3.4 }}>{room.price}</TableCell></Box>
+                          ))} 
+                      </TableCell>
+                      <TableCell style={tableCellStyle} sx={{p:0}} >
+                          {row.dollars.map((dollar, index) => (
+                            <Box width={1} key={dollar.price+index}  sx={{ borderBottom: (index === 1 || row.dollars.length > 2) ? `1px solid #0000001a`: 'none'  }}>  <TableCell  sx={{p: 0, py: 3.4 }}>{dollar.price}</TableCell></Box>
                           ))} 
                       </TableCell>
 

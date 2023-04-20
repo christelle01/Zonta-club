@@ -97,7 +97,7 @@ const NavigationMenu = () => {
                 CONTACT
               </Link>
             </Button>
-            <div>
+            <Stack>
               <Button
                 id="basic-button"
                 aria-controls={open ? "basic-menu" : undefined}
@@ -119,7 +119,7 @@ const NavigationMenu = () => {
                 <MenuItem onClick={handleClose}>ENGLISH</MenuItem>
                 <MenuItem onClick={handleClose}>FRENCH</MenuItem>
               </Menu>
-            </div>
+            </Stack>
           </Container>
         </Toolbar>
       </Stack>

@@ -67,6 +67,7 @@ export const rowBigHotel = [
     name: "Hôtel 2 Février ( même endroit que le centre de conférence)",
     number: "200",
     rooms: [{type: "Standard (double)", price: "65.000"}, {type: "Standard + (double)", price: "75.000"}],
+    dollars: [{type: "Standard (double)", price: "108,30"}, {type: "Standard + (double)", price: "124,97"}],
     link: "	https://2fevrier.com/fr/",
   },
   {
@@ -74,6 +75,7 @@ export const rowBigHotel = [
     name: "Hôtel Sarakawa (6,9 km du centre de conférence soit 13 min en voiture)",
     number: "100",
     rooms: [{type: "Standard (double)", price: "91.000"}, { type: "tandard + (double)", price: "171.000"}],
+    dollars: [{type: "Standard (double)", price: "151,63"}, {type: "Standard + (double)", price: "284,93"}],
     link: "https://sarakawa-hotel.com/",
   },
   {
@@ -81,6 +83,7 @@ export const rowBigHotel = [
     name: "Hôtel Onomo (5,5 km du centre de conférence soit 11 min en voiture)",
     number: "58",
     rooms:[{type: "Standard (double)", price: "49.510"}, { type:"Standard + (double)", price: "57.122" }],
+    dollars: [{type: "Standard (double)", price: "82,50"}, {type: "Standard + (double)", price: "95,18"}],
     link: "https://www.booking.com/hotel/tg/onomo-lome.fr.html",
   },
   {
@@ -88,6 +91,7 @@ export const rowBigHotel = [
     name: "	Hôtel ANHUI (2,7 km du centre de conférence soit 7 min en voiture)",
     number: "49",
     rooms:[{type: "Standard (double)", price: "41.000"}, { type:"Standard + (double)", price: "47.000" }],
+    dollars: [{type: "Standard (double)", price: "68,32"}, {type: "Standard + (double)", price: "78,32"}],
     link: "https://www.booking.com/hotel/tg/anhui.fr.html",
   },
   {
@@ -95,6 +99,7 @@ export const rowBigHotel = [
     name: "Hôtel Pélican (6,8 km du centre de conférence soit 13 min en voiture)",
     number: "30",
     rooms:[{type: "Standard (double)", price: "48.000"}, { type:"Standard (single)", price: "37.000" }],
+    dollars: [{type: "Standard (double)", price: "79,98"}, {type: "Standard + (double)", price: "61,65"}],
     link: "https://www.hotel-pelican.com/",
   },
   {
@@ -102,6 +107,7 @@ export const rowBigHotel = [
     name: "Hôtel du Golfe (1,4 km du centre de conférence soit 5 min en voiture)",
     number: "30",
     rooms: [{type: "Standard (double)", price: "70.000"}],
+    dollars: [{type: "Standard (double)", price: "116,64"}],
     link: "https://www.booking.com/hotel/tg/du-golfe.fr.html",
   },
   {
@@ -109,6 +115,7 @@ export const rowBigHotel = [
     name: "Blue turtler (7,6 km du centre de conférence soit 16 min en voiture)",
     number: "14",
     rooms: [{type: "Standard (double)", price: "100.000"}, {type: "Standard + (double)", price: "120.000"}],
+    dollars: [{type: "Standard (double)", price: "166,63"}, {type: "Standard + (double)", price: "199,95"}],
     link: "http://blueturtletogo.com/",
   },
   {
@@ -116,6 +123,7 @@ export const rowBigHotel = [
     name: "Hôtel AHODIKPE (1 km du centre de conférence soit 3 min en voiture)",
     number: "123",
     rooms: [{type: "Standard (double)", price: "45.000"}],
+    dollars: [{type: "Standard (double)", price: "74,98"}],
     link: "",
   },
 ];
@@ -127,6 +135,7 @@ export const rowSmallHotel = [
     name: "key Boutique Hôtel (2,4 km du centre de conférence soit 5 min en voiture)",
     number: "8",
     rooms: [{type: "Standard (double)", price: "45.000"}, {type: "Standard + (double)", price: "75.000"}],
+    dollars: [{type: "Standard (double)", price: "74,98"}, {type: "Standard + (double)", price: "124,97"}],
     link: "http://thekeyboutiquehotel.com/",
   },
   {
@@ -134,6 +143,7 @@ export const rowSmallHotel = [
     name: "Hôtel la pointe des antilles (4,5 km du centre de conférence soit 10 min en voiture)",
     number: "12",
     rooms: [{type: "Standard (double)", price: "31.000"}, { type: "Standard + (double)", price: "61.000"}],
+    dollars: [{type: "Standard (double)", price: "51,65"}, {type: "Standard + (double)", price: "101,64"}],
     link: "https://la-pointe-des-antilles-lome.hotelmix.fr/#r",
   },
 ];
@@ -144,6 +154,7 @@ export const rowFurnished = [
     name: "Hôtel SCI ROSALIE'S (4,1 km du centre de conférence soit 9 min en voiture)",
     number: "12",
     rooms: [{type: "Appartement de 1 Chambre", price: "40.000"}, { type: "Appartement de 1 Chambre", price: "75.000"}, { type: "Appartement de 2 Chambres", price: "115.000"},  { type: "Appartement de 2 Chambres", price: "150.000"}],
+    dollars: [{type: "Appartement de 1 Chambre", price: "66,65"}, {type: "Appartement de 1 Chambre", price: "124,97"}, { type: "Appartement de 2 Chambres", price: "191,62"},  { type: "Appartement de 2 Chambres", price: "249,94"}],
     link: "https://www.booking.com/hotel/tg/rosalie-39-s-suites.fr.html",
   },
 ];
@@ -158,12 +169,10 @@ export const PROGRAM = [
   {
     daytitle: "Jour 02",
     daydate: "20 Oct",
-  },{
+  },
+  {
     daytitle: "Jour 03",
     daydate: "21 Oct",
-  },{
-    daytitle: "Jour 04",
-    daydate: "22 Oct",
   },
 ]
 
